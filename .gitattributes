@@ -1,1 +1,13 @@
-Unity-Biomas.psd filter=lfs diff=lfs merge=lfs -text
+# Rastrear todos os arquivos de imagem pesados
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+
+# Rastrear modelos 3D e pacotes
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
+
+# Garante que arquivos do Unity sejam tratados como texto para evitar conflitos
+*.asset merge=unityyamltextfast
+*.unity merge=unityyamltextfast
