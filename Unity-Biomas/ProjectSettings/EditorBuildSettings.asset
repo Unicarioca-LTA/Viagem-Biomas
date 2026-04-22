@@ -20,6 +20,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ranking.unity
     guid: cfd5eb9a7e9071646b089f8ec23a3460
+  - enabled: 1
+    path: Assets/Scenes/SelecaoAvatar.unity
+    guid: 82811343d89689f498c05f8c8a343ac1
+  - enabled: 1
+    path: Assets/Scenes/SelecaoBioma.unity
+    guid: 29640cb5f3586b048b911e1dd66757ab
+  - enabled: 1
+    path: Assets/Scenes/Amazonia.unity
+    guid: 6e8420a895256d5479f7981d23cdeb20
+  - enabled: 1
+    path: Assets/Scenes/Caatinga.unity
+    guid: 7218f170f68f6c74a8bf98f4635403bf
+  - enabled: 1
+    path: Assets/Scenes/Cerrado.unity
+    guid: 85dcb3893f80429469c9455cfc561700
+  - enabled: 1
+    path: Assets/Scenes/MataAtlantica.unity
+    guid: 62faee02e59123241bc784fa3210626c
+  - enabled: 1
+    path: Assets/Scenes/Pampa.unity
+    guid: 8a6d5eda600c9294a85d4aebe0126ff3
+  - enabled: 1
+    path: Assets/Scenes/Pantanal.unity
+    guid: c67c4249abdfc9b469f308a22793e597
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
