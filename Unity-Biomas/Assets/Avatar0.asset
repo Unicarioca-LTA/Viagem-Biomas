@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AvatarData
   id: 0
   nomeAvatar: 
-  foto: {fileID: -2667352027062038892, guid: 7711c9e3218a44f41a9020c2bf4ec2bc, type: 3}
+  foto: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

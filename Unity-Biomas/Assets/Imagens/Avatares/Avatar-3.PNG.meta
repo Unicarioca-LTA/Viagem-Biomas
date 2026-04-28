@@ -119,10 +119,10 @@ TextureImporter:
       name: Avatar-3_0
       rect:
         serializedVersion: 2
-        x: 953
-        y: 73
-        width: 949
-        height: 1603
+        x: 0
+        y: 9
+        width: 947
+        height: 1437
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Avatar-3_1
       rect:
         serializedVersion: 2
-        x: 1413
-        y: 1667
+        x: 459
+        y: 1437
         width: 14
-        height: 10
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

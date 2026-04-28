@@ -11,15 +11,6 @@ TextureImporter:
   - first:
       213: -6309575133196736201
     second: Avatar-4_2
-  - first:
-      213: -8114382938169953038
-    second: Avatar-4_3
-  - first:
-      213: 3051039775361385749
-    second: Avatar-4_4
-  - first:
-      213: 3602547731329695707
-    second: Avatar-4_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,10 +122,10 @@ TextureImporter:
       name: Avatar-4_0
       rect:
         serializedVersion: 2
-        x: 1067
-        y: 283
-        width: 683
-        height: 1428
+        x: 0
+        y: 0
+        width: 682
+        height: 1427
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +144,10 @@ TextureImporter:
       name: Avatar-4_1
       rect:
         serializedVersion: 2
-        x: 1403
-        y: 1706
+        x: 335
+        y: 1422
         width: 32
-        height: 10
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,9 +166,9 @@ TextureImporter:
       name: Avatar-4_2
       rect:
         serializedVersion: 2
-        x: 1781
-        y: 1413
-        width: 22
+        x: 641
+        y: 1046
+        width: 43
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,72 +180,6 @@ TextureImporter:
       bones: []
       spriteID: 739ab2e88d2ef68a0800000000000000
       internalID: -6309575133196736201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Avatar-4_3
-      rect:
-        serializedVersion: 2
-        x: 1809
-        y: 1355
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f4b3e6a5bbe36f80800000000000000
-      internalID: -8114382938169953038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Avatar-4_4
-      rect:
-        serializedVersion: 2
-        x: 1709
-        y: 1330
-        width: 43
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 515c006b288775a20800000000000000
-      internalID: 3051039775361385749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Avatar-4_5
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 1183
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bdfbb441312def130800000000000000
-      internalID: 3602547731329695707
       vertices: []
       indices: 
       edges: []
@@ -276,9 +201,6 @@ TextureImporter:
       Avatar-4_0: -8922853838802930695
       Avatar-4_1: -8666816444203429048
       Avatar-4_2: -6309575133196736201
-      Avatar-4_3: -8114382938169953038
-      Avatar-4_4: 3051039775361385749
-      Avatar-4_5: 3602547731329695707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

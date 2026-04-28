@@ -116,10 +116,10 @@ TextureImporter:
       name: Avatar-2_0
       rect:
         serializedVersion: 2
-        x: 923
-        y: 253
-        width: 914
-        height: 1482
+        x: 0
+        y: 0
+        width: 912
+        height: 1480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1029261599}
         m_TargetAssemblyTypeName: SelecaoManager, Assembly-CSharp
         m_MethodName: SelecionarAvatar
         m_Mode: 2
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2667352027062038892, guid: 7711c9e3218a44f41a9020c2bf4ec2bc, type: 3}
+  m_Sprite: {fileID: -2125262148206457541, guid: 7711c9e3218a44f41a9020c2bf4ec2bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1029261599}
         m_TargetAssemblyTypeName: SelecaoManager, Assembly-CSharp
         m_MethodName: SelecionarAvatar
         m_Mode: 2
@@ -2433,7 +2433,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1029261599}
         m_TargetAssemblyTypeName: SelecaoManager, Assembly-CSharp
         m_MethodName: SelecionarAvatar
         m_Mode: 2
@@ -2913,7 +2913,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1029261599}
         m_TargetAssemblyTypeName: SelecaoManager, Assembly-CSharp
         m_MethodName: SelecionarAvatar
         m_Mode: 2
@@ -3179,7 +3179,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1029261599}
         m_TargetAssemblyTypeName: SelecaoManager, Assembly-CSharp
         m_MethodName: SelecionarAvatar
         m_Mode: 2
@@ -3495,7 +3495,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1029261599}
         m_TargetAssemblyTypeName: SelecaoManager, Assembly-CSharp
         m_MethodName: SelecionarAvatar
         m_Mode: 2

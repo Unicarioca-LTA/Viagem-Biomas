@@ -5,12 +5,6 @@ TextureImporter:
   - first:
       213: 7828833585515691687
     second: Avatar-6_0
-  - first:
-      213: -8016574971139366923
-    second: Avatar-6_1
-  - first:
-      213: 783015763981814843
-    second: Avatar-6_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,10 +116,10 @@ TextureImporter:
       name: Avatar-6_0
       rect:
         serializedVersion: 2
-        x: 1147
-        y: 340
-        width: 645
-        height: 1420
+        x: 0
+        y: 0
+        width: 626
+        height: 1415
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,50 +130,6 @@ TextureImporter:
       bones: []
       spriteID: 7ae7f46caaa95ac60800000000000000
       internalID: 7828833585515691687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Avatar-6_1
-      rect:
-        serializedVersion: 2
-        x: 1833
-        y: 1571
-        width: 23
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ff53f199876fb090800000000000000
-      internalID: -8016574971139366923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Avatar-6_2
-      rect:
-        serializedVersion: 2
-        x: 1807
-        y: 1552
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3ccaa150b4ddda00800000000000000
-      internalID: 783015763981814843
       vertices: []
       indices: 
       edges: []
@@ -199,8 +149,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Avatar-6_0: 7828833585515691687
-      Avatar-6_1: -8016574971139366923
-      Avatar-6_2: 783015763981814843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
