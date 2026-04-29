@@ -21,24 +21,38 @@ public class QuizManager : MonoBehaviour
 
     void Start()
     {
-        // Criando perguntas direto no código
-        perguntas = new Pergunta[]
+        Pergunta[] todasPerguntas = new Pergunta[]
         {
-            new Pergunta
-            {
-                enunciado = "A Amazônia é o maior bioma do Brasil?",
-                alternativas = new string[] { "A", "B", "C", "D" },
-                respostaCorreta = 0
-            },
-            new Pergunta
-            {
-                enunciado = "O Cerrado é considerado uma savana?",
-                alternativas = new string[] { "A", "B", "C", "D" },
-                respostaCorreta = 3
-            }
+        new Pergunta { enunciado = "1. Qual é a principal característica do clima na Floresta Amazônica?", alternativas = new string[] { "A) Frio e seco, com neve no inverno.", "B) Quente e muito úmido, com chuvas frequentes.", "C) Temperado, com estações do ano bem definidas.",}, respostaCorreta = 1 },
+        new Pergunta { enunciado = "Pergunta 2", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 1 },
+        new Pergunta { enunciado = "Pergunta 3", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 2 },
+        new Pergunta { enunciado = "Pergunta 4", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 3 },
+        new Pergunta { enunciado = "Pergunta 5", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 0 },
+            // 👉 adiciona suas 20 perguntas aqui
         };
 
+        // 👉 embaralha as perguntas
+        Embaralhar(todasPerguntas);
+
+        // 👉 pega só as 3 primeiras
+        perguntas = new Pergunta[3];
+        for (int i = 0; i < 3; i++)
+        {
+            perguntas[i] = todasPerguntas[i];
+        }
+
         MostrarPergunta();
+    }
+    void Embaralhar(Pergunta[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(i, array.Length);
+
+            Pergunta temp = array[i];
+            array[i] = array[randomIndex];
+            array[randomIndex] = temp;
+        }
     }
 
     void MostrarPergunta()
@@ -83,11 +97,8 @@ public class QuizManager : MonoBehaviour
         Debug.Log("Fim do quiz!");
         Debug.Log("Pontuação final: " + pontuacao);
 
-        // 👇 SALVA A PONTUAÇÃO
-        PlayerPrefs.SetInt("Pontuacao", pontuacao);
-        PlayerPrefs.Save();
+        RankingManager.instance.SalvarPontuacao(pontuacao);
 
-        // 👇 TROCA DE CENA
         UnityEngine.SceneManagement.SceneManager.LoadScene("Ranking");
     }
 }

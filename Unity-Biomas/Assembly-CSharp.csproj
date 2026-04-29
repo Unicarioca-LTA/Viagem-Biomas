@@ -52,6 +52,7 @@
     <Compile Include="Assets\Scripts\RankingManager.cs" />
     <Compile Include="Assets\Scripts\AvatarData.cs" />
     <Compile Include="Assets\Scripts\QuizManager.cs" />
+    <Compile Include="Assets\Scripts\TelaRanking.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\SelecaoManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
