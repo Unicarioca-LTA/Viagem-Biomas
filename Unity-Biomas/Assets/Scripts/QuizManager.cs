@@ -24,7 +24,7 @@ public class QuizManager : MonoBehaviour
         Pergunta[] todasPerguntas = new Pergunta[]
         {
         new Pergunta { enunciado = "1. Qual é a principal característica do clima na Floresta Amazônica?", alternativas = new string[] { "A) Frio e seco, com neve no inverno.", "B) Quente e muito úmido, com chuvas frequentes.", "C) Temperado, com estações do ano bem definidas.",}, respostaCorreta = 1 },
-        new Pergunta { enunciado = "Pergunta 2", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 1 },
+        new Pergunta { enunciado = "2. A Amazônia é considerada a maior floresta tropical do mundo. Quanto do território brasileiro ela ocupa aproximadamente?", alternativas = new string[] { "A) Quase metade (49%).", "B) Uma pequena parte (10%). ", "C) Apenas a região litorânea (5%).", "" }, respostaCorreta = 0 },
         new Pergunta { enunciado = "Pergunta 3", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 2 },
         new Pergunta { enunciado = "Pergunta 4", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 3 },
         new Pergunta { enunciado = "Pergunta 5", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 0 },

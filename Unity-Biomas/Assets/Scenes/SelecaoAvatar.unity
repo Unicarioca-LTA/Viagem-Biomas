@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca6d19237a010e43b4851fc4e3618b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelecaoManager
-  campoNome: {fileID: 412177221}
+  campoNome: {fileID: 412177222}
 --- !u!4 &1029261600
 Transform:
   m_ObjectHideFlags: 0
