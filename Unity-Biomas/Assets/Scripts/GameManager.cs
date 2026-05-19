@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
                 painelAmazonia.interactable = false;
             }
         }
+        if (SceneManager.GetActiveScene().name == "SelecaoAvatar")
+        {
+            GameUtility.BotaoPainel = true;
+            
+        }
     }
     public void CarregarCena(string nomeCena)
     {
