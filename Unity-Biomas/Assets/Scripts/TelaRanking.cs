@@ -9,5 +9,6 @@ public class TelaRanking : MonoBehaviour
     {
         RankingManager.instance.textoRanking = textoRanking;
         RankingManager.instance.MostrarRanking();
+        
     }
 }

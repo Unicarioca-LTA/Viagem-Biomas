@@ -3,7 +3,31 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
+
+    
 {
+    public Button painelAmazonia;
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "SelecaoBioma")
+        {
+
+            if (GameUtility.BotaoPainel == false)
+            {
+                painelAmazonia.interactable = false;
+            }
+        }
+    }
+    public void CarregarCena(string nomeCena)
+    {
+        SceneManager.LoadScene(nomeCena);
+    }
+
+    public void DesativarAmazonia()
+    {
+        GameUtility.BotaoPainel = false;
+    }
+
     public void IniciarJogo()
     {
         SceneManager.LoadScene("Menu");
@@ -178,74 +202,7 @@ public class GameManager : MonoBehaviour
     }    
 
 
-    public void Pampa()
-    {
-        SceneManager.LoadScene("Pampa");
-    }
-
-        public void PampaMapa()
-    {
-        SceneManager.LoadScene("PampaMapa");
-    }       
-        public void PampaRegioes()
-    {
-        SceneManager.LoadScene("PampaRegioes");
-    }       
-        public void PampaClima()
-    {
-        SceneManager.LoadScene("PampaClima");
-    }       
-        public void PampaVegetacao()
-    {
-        SceneManager.LoadScene("PampaVegetacao");
-    }       
-        public void PampaAmeacas()
-    {
-        SceneManager.LoadScene("PampaAmeacas");
-    }       
-        public void PampaFauna()
-    {
-        SceneManager.LoadScene("PampaFauna");
-    }
-    public void PampaQuiz()
-    {
-        SceneManager.LoadScene("PampaQuiz");
-    }    
-
-     
-    public void Pantanal()
-    {
-        SceneManager.LoadScene("Pantanal");
-    }        
-    
-        public void PantanalMapa()
-    {
-        SceneManager.LoadScene("PantanalMapa");
-    }       
-        public void PantanalRegioes()
-    {
-        SceneManager.LoadScene("PantanalRegioes");
-    }       
-        public void PantanalClima()
-    {
-        SceneManager.LoadScene("PantanalClima");
-    }       
-        public void PantanalVegetacao()
-    {
-        SceneManager.LoadScene("PantanalVegetacao");
-    }       
-        public void PantanalAmeacas()
-    {
-        SceneManager.LoadScene("PantanalAmeacas");
-    }       
-        public void PantanalFauna()
-    {
-        SceneManager.LoadScene("PantanalFauna");
-    }
-    public void PantanalQuiz()
-    {
-        SceneManager.LoadScene("PantanalQuiz");
-    }    
+      
 
     public void SairJogo()
     {

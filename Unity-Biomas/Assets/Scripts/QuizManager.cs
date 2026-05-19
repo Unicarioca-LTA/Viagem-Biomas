@@ -1,6 +1,15 @@
 using UnityEngine;
 using TMPro;
-using System;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
+
+public enum Dificuldade
+{
+    Facil,
+    Medio,
+    Dificil
+}
 
 [System.Serializable]
 public class Pergunta
@@ -8,50 +17,227 @@ public class Pergunta
     public string enunciado;
     public string[] alternativas;
     public int respostaCorreta;
+
+    public Dificuldade dificuldade;
 }
 
 public class QuizManager : MonoBehaviour
 {
     public TextMeshProUGUI textoPergunta;
-    public TextMeshProUGUI[] textosAlternativas; // arrastar os textos dos botões aqui
+    public TextMeshProUGUI[] textosAlternativas;
 
     private Pergunta[] perguntas;
+
     private int perguntaAtual = 0;
     private int pontuacao = 0;
+    //public GameObject PainelPergunta;
+    public int contador = 0;
+
+
+    public void DesativarPainelPergunta(GameObject painel)
+    {
+        
+        if (contador == perguntas.Length)
+        {
+            painel.SetActive(false);
+
+        }
+        
+    }
 
     void Start()
     {
+
         Pergunta[] todasPerguntas = new Pergunta[]
         {
-        new Pergunta { enunciado = "1. Qual é a principal característica do clima na Floresta Amazônica?", alternativas = new string[] { "A) Frio e seco, com neve no inverno.", "B) Quente e muito úmido, com chuvas frequentes.", "C) Temperado, com estações do ano bem definidas.",}, respostaCorreta = 1 },
-        new Pergunta { enunciado = "2. A Amazônia é considerada a maior floresta tropical do mundo. Quanto do território brasileiro ela ocupa aproximadamente?", alternativas = new string[] { "A) Quase metade (49%).", "B) Uma pequena parte (10%). ", "C) Apenas a região litorânea (5%).", "" }, respostaCorreta = 0 },
-        new Pergunta { enunciado = "Pergunta 3", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 2 },
-        new Pergunta { enunciado = "Pergunta 4", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 3 },
-        new Pergunta { enunciado = "Pergunta 5", alternativas = new string[] { "A", "B", "C", "D" }, respostaCorreta = 0 },
-            // 👉 adiciona suas 20 perguntas aqui
+            // =========================
+            // PERGUNTAS FÁCEIS
+            // =========================
+
+            new Pergunta
+            {
+                enunciado = "Qual é o maior bioma do Brasil?",
+                alternativas = new string[]
+                {
+                    "Amazônia",
+                    "Cerrado",
+                    "Caatinga"
+                },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Facil
+            },
+
+            new Pergunta
+            {
+                enunciado = "O Cerrado é conhecido como:",
+                alternativas = new string[]
+                {
+                    "Savana brasileira",
+                    "Floresta congelada",
+                    "Deserto"
+                },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Facil
+            },
+
+            new Pergunta
+            {
+                enunciado = "Qual bioma possui clima muito úmido?",
+                alternativas = new string[]
+                {
+                    "Pantanal",
+                    "Amazônia",
+                    "Pampa"
+                },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Facil
+            },
+
+            // =========================
+            // PERGUNTAS MÉDIAS
+            // =========================
+
+            new Pergunta
+            {
+                enunciado = "Qual bioma brasileiro possui vegetação adaptada à seca?",
+                alternativas = new string[]
+                {
+                    "Caatinga",
+                    "Mata Atlântica",
+                    "Pantanal"
+                },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Medio
+            },
+
+            new Pergunta
+            {
+                enunciado = "O Pantanal é conhecido principalmente por:",
+                alternativas = new string[]
+                {
+                    "Neve intensa",
+                    "Áreas alagadas",
+                    "Grandes montanhas"
+                },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+
+            new Pergunta
+            {
+                enunciado = "A Mata Atlântica foi muito afetada por:",
+                alternativas = new string[]
+                {
+                    "Urbanização",
+                    "Geleiras",
+                    "Vulcões"
+                },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Medio
+            },
+
+            // =========================
+            // PERGUNTAS DIFÍCEIS
+            // =========================
+
+            new Pergunta
+            {
+                enunciado = "Qual bioma ocupa quase metade do território brasileiro?",
+                alternativas = new string[]
+                {
+                    "Cerrado",
+                    "Caatinga",
+                    "Amazônia"
+                },
+                respostaCorreta = 2,
+                dificuldade = Dificuldade.Dificil
+            },
+
+            new Pergunta
+            {
+                enunciado = "O bioma Pampa está localizado principalmente em qual região?",
+                alternativas = new string[]
+                {
+                    "Sul",
+                    "Norte",
+                    "Nordeste"
+                },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Dificil
+            },
+
+            new Pergunta
+            {
+                enunciado = "Qual bioma sofre com queimadas frequentes?",
+                alternativas = new string[]
+                {
+                    "Cerrado",
+                    "Pantanal",
+                    "Todos os anteriores"
+                },
+                respostaCorreta = 2,
+                dificuldade = Dificuldade.Dificil
+            }
         };
 
-        // 👉 embaralha as perguntas
-        Embaralhar(todasPerguntas);
+        // =========================
+        // SEPARA POR DIFICULDADE
+        // =========================
 
-        // 👉 pega só as 3 primeiras
-        perguntas = new Pergunta[3];
-        for (int i = 0; i < 3; i++)
+        List<Pergunta> faceis = new List<Pergunta>();
+        List<Pergunta> medias = new List<Pergunta>();
+        List<Pergunta> dificeis = new List<Pergunta>();
+
+        foreach (Pergunta p in todasPerguntas)
         {
-            perguntas[i] = todasPerguntas[i];
+            if (p.dificuldade == Dificuldade.Facil)
+            {
+                faceis.Add(p);
+            }
+            else if (p.dificuldade == Dificuldade.Medio)
+            {
+                medias.Add(p);
+            }
+            else
+            {
+                dificeis.Add(p);
+            }
         }
+
+        // =========================
+        // EMBARALHA CADA LISTA
+        // =========================
+
+        Embaralhar(faceis);
+        Embaralhar(medias);
+        Embaralhar(dificeis);
+
+        // =========================
+        // PEGA:
+        // 1 FÁCIL
+        // 1 MÉDIA
+        // 1 DIFÍCIL
+        // =========================
+
+        perguntas = new Pergunta[]
+        {
+            faceis[0],
+            medias[0],
+            dificeis[0]
+        };
 
         MostrarPergunta();
     }
-    void Embaralhar(Pergunta[] array)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            int randomIndex = UnityEngine.Random.Range(i, array.Length);
 
-            Pergunta temp = array[i];
-            array[i] = array[randomIndex];
-            array[randomIndex] = temp;
+    void Embaralhar(List<Pergunta> lista)
+    {
+        for (int i = 0; i < lista.Count; i++)
+        {
+            int randomIndex = Random.Range(i, lista.Count);
+
+            Pergunta temp = lista[i];
+            lista[i] = lista[randomIndex];
+            lista[randomIndex] = temp;
         }
     }
 
@@ -61,7 +247,6 @@ public class QuizManager : MonoBehaviour
 
         textoPergunta.text = p.enunciado;
 
-        // Atualiza as alternativas
         for (int i = 0; i < p.alternativas.Length; i++)
         {
             textosAlternativas[i].text = p.alternativas[i];
@@ -70,10 +255,29 @@ public class QuizManager : MonoBehaviour
 
     public void Responder(int indice)
     {
+
+        contador++;
+
         if (indice == perguntas[perguntaAtual].respostaCorreta)
         {
             Debug.Log("Acertou!");
-            pontuacao += 10; // 👈 soma pontos
+
+            // =========================
+            // PONTUAÇÃO POR DIFICULDADE
+            // =========================
+
+            if (perguntas[perguntaAtual].dificuldade == Dificuldade.Facil)
+            {
+                pontuacao += 10;
+            }
+            else if (perguntas[perguntaAtual].dificuldade == Dificuldade.Medio)
+            {
+                pontuacao += 20;
+            }
+            else if (perguntas[perguntaAtual].dificuldade == Dificuldade.Dificil)
+            {
+                pontuacao += 30;
+            }
         }
         else
         {
@@ -88,7 +292,7 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
-            FinalizarQuiz(); // 👈 chama o final
+            FinalizarQuiz();
         }
     }
 
@@ -97,8 +301,10 @@ public class QuizManager : MonoBehaviour
         Debug.Log("Fim do quiz!");
         Debug.Log("Pontuação final: " + pontuacao);
 
+        // 👇 salva nome + pontuação no ranking
         RankingManager.instance.SalvarPontuacao(pontuacao);
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Ranking");
+        // 👇 vai para a cena do ranking
+        
     }
 }

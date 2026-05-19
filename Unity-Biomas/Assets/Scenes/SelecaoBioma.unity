@@ -2598,6 +2598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544615eadea27f4479d6a5a866a47f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorMenu
+  painelAmazonia: {fileID: 89020219}
 --- !u!4 &1927107929
 Transform:
   m_ObjectHideFlags: 0

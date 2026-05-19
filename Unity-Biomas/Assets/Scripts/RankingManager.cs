@@ -23,17 +23,16 @@ public class Ranking
 
 public class RankingManager : MonoBehaviour
 {
-    public static RankingManager instance; // 👈 ESSA LINHA FALTAVA
+    public static RankingManager instance;
 
     public TextMeshProUGUI textoRanking;
 
     void Awake()
     {
-        // 👇 ISSO RESOLVE O ERRO DO INSTANCE
+        // Singleton
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // mantém entre cenas
         }
         else
         {
@@ -49,61 +48,104 @@ public class RankingManager : MonoBehaviour
         }
     }
 
+    // =========================
+    // SALVAR PONTUAÇÃO
+    // =========================
+
     public void SalvarPontuacao(int pontuacao)
     {
-        string nome = GameHandler.instance.nomeJogador;
+        // Nome padrão
+        string nome = "Jogador";
+
+        // Pega nome do jogador se existir
+        if (GameHandler.instance != null)
+        {
+            nome = GameHandler.instance.nomeJogador;
+        }
 
         Ranking ranking = new Ranking();
 
+        // Carrega ranking salvo
         if (PlayerPrefs.HasKey("Ranking"))
         {
             string json = PlayerPrefs.GetString("Ranking");
-            ranking = JsonUtility.FromJson<Ranking>(json);
+
+            Ranking rankingSalvo = JsonUtility.FromJson<Ranking>(json);
+
+            if (rankingSalvo != null)
+            {
+                ranking = rankingSalvo;
+            }
         }
 
+        // Adiciona novo jogador
         ranking.jogadores.Add(new Jogador(nome, pontuacao));
 
         // Ordena do maior para o menor
         ranking.jogadores.Sort((a, b) => b.pontuacao.CompareTo(a.pontuacao));
 
-        // Limita a 10 jogadores
+        // Mantém apenas TOP 10
         if (ranking.jogadores.Count > 10)
         {
             ranking.jogadores.RemoveRange(10, ranking.jogadores.Count - 10);
         }
 
+        // Salva em JSON
         string novoJson = JsonUtility.ToJson(ranking);
+
         PlayerPrefs.SetString("Ranking", novoJson);
         PlayerPrefs.Save();
 
-        Debug.Log("Salvando: " + nome + " - " + pontuacao);
+        Debug.Log("Pontuação salva: " + nome + " - " + pontuacao);
     }
+
+    // =========================
+    // MOSTRAR RANKING
+    // =========================
 
     public void MostrarRanking()
     {
-
         if (textoRanking == null)
         {
-            Debug.LogError("Nenhum TextMeshProUGUI encontrado na cena!");
+            Debug.LogError("TextoRanking não foi conectado no Inspector!");
             return;
         }
 
+        // Se não existir ranking salvo
         if (!PlayerPrefs.HasKey("Ranking"))
         {
-            textoRanking.text = "RANKING";
+            textoRanking.text = "RANKING VAZIO";
             return;
         }
 
         string json = PlayerPrefs.GetString("Ranking");
+
         Ranking ranking = JsonUtility.FromJson<Ranking>(json);
 
-        string texto = "RANKING:\n\n";
+        // Proteção contra erro
+        if (ranking == null || ranking.jogadores == null)
+        {
+            textoRanking.text = "RANKING VAZIO";
+            return;
+        }
+
+        // Se lista estiver vazia
+        if (ranking.jogadores.Count == 0)
+        {
+            textoRanking.text = "RANKING VAZIO";
+            return;
+        }
+
+        // Monta texto
+        string texto = "RANKING\n\n";
 
         for (int i = 0; i < ranking.jogadores.Count; i++)
         {
-            texto += (i + 1) + ". " +
-                     ranking.jogadores[i].nome + " - " +
-                     ranking.jogadores[i].pontuacao + " pontos\n";
+            texto += (i + 1) + "º - " +
+                     ranking.jogadores[i].nome +
+                     " : " +
+                     ranking.jogadores[i].pontuacao +
+                     " pts\n";
         }
 
         textoRanking.text = texto;
