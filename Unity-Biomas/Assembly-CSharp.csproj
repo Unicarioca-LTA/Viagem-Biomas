@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\RankingManager.cs" />
     <Compile Include="Assets\Scripts\AvatarData.cs" />
+    <Compile Include="Assets\Scripts\QuizManagerCerrado.cs" />
     <Compile Include="Assets\Scripts\QuizManager.cs" />
     <Compile Include="Assets\Scripts\GameUtility.cs" />
     <Compile Include="Assets\Scripts\TelaRanking.cs" />

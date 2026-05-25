@@ -204,14 +204,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PampaMapa
-        m_Mode: 1
+        m_MethodName: CarregarCena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PampaMapa
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &89020220
@@ -1461,14 +1461,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PampaRegioes
-        m_Mode: 1
+        m_MethodName: CarregarCena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PampaRegioes
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &756378950
@@ -2063,14 +2063,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PampaFauna
-        m_Mode: 1
+        m_MethodName: CarregarCena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PampaFauna
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1404400430
@@ -2333,14 +2333,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PampaVegetacao
-        m_Mode: 1
+        m_MethodName: CarregarCena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PampaVegetacao
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1704801735
@@ -2599,14 +2599,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PampaAmeacas
-        m_Mode: 1
+        m_MethodName: CarregarCena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PampaAmeacas
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1824084951
@@ -2813,6 +2813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544615eadea27f4479d6a5a866a47f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorMenu
+  painelAmazonia: {fileID: 0}
 --- !u!4 &1927107929
 Transform:
   m_ObjectHideFlags: 0
@@ -3046,14 +3047,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PampaClima
-        m_Mode: 1
+        m_MethodName: CarregarCena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PampaClima
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1975310903

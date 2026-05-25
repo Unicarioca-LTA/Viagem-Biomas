@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using JetBrains.Annotations;
 
 public enum Dificuldade
 {
@@ -17,78 +16,62 @@ public class Pergunta
     public string enunciado;
     public string[] alternativas;
     public int respostaCorreta;
-
     public Dificuldade dificuldade;
 }
 
 public class QuizManager : MonoBehaviour
 {
+    [Header("Componentes de Tela do Quiz")]
     public TextMeshProUGUI textoPergunta;
     public TextMeshProUGUI[] textosAlternativas;
 
+    [Header("Configuração do Pop-up de Fim de Quiz")]
+    public GameObject painelResultadoFinal; 
+    public TextMeshProUGUI textoResultadoFinal; 
+
     private Pergunta[] perguntas;
-
     private int perguntaAtual = 0;
-    private int pontuacao = 0;
-    //public GameObject PainelPergunta;
+    private int pontuacaoBioma = 0; // Pontuação exclusiva deste bioma (Amazônia)
     public int contador = 0;
-
 
     public void DesativarPainelPergunta(GameObject painel)
     {
-        
         if (contador == perguntas.Length)
         {
             painel.SetActive(false);
-
         }
-        
     }
 
     void Start()
     {
+        if (painelResultadoFinal != null)
+        {
+            painelResultadoFinal.SetActive(false);
+        }
 
         Pergunta[] todasPerguntas = new Pergunta[]
         {
             // =========================
             // PERGUNTAS FÁCEIS
             // =========================
-
             new Pergunta
             {
                 enunciado = "Qual é o maior bioma do Brasil?",
-                alternativas = new string[]
-                {
-                    "Amazônia",
-                    "Cerrado",
-                    "Caatinga"
-                },
+                alternativas = new string[] { "Amazônia", "Cerrado", "Caatinga" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Facil
             },
-
             new Pergunta
             {
                 enunciado = "O Cerrado é conhecido como:",
-                alternativas = new string[]
-                {
-                    "Savana brasileira",
-                    "Floresta congelada",
-                    "Deserto"
-                },
+                alternativas = new string[] { "Savana brasileira", "Floresta congelada", "Deserto" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Facil
             },
-
             new Pergunta
             {
                 enunciado = "Qual bioma possui clima muito úmido?",
-                alternativas = new string[]
-                {
-                    "Pantanal",
-                    "Amazônia",
-                    "Pampa"
-                },
+                alternativas = new string[] { "Pantanal", "Amazônia", "Pampa" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Facil
             },
@@ -96,42 +79,24 @@ public class QuizManager : MonoBehaviour
             // =========================
             // PERGUNTAS MÉDIAS
             // =========================
-
             new Pergunta
             {
                 enunciado = "Qual bioma brasileiro possui vegetação adaptada à seca?",
-                alternativas = new string[]
-                {
-                    "Caatinga",
-                    "Mata Atlântica",
-                    "Pantanal"
-                },
+                alternativas = new string[] { "Caatinga", "Mata Atlântica", "Pantanal" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Medio
             },
-
             new Pergunta
             {
                 enunciado = "O Pantanal é conhecido principalmente por:",
-                alternativas = new string[]
-                {
-                    "Neve intensa",
-                    "Áreas alagadas",
-                    "Grandes montanhas"
-                },
+                alternativas = new string[] { "Neve intensa", "Áreas alagadas", "Grandes montanhas" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Medio
             },
-
             new Pergunta
             {
                 enunciado = "A Mata Atlântica foi muito afetada por:",
-                alternativas = new string[]
-                {
-                    "Urbanização",
-                    "Geleiras",
-                    "Vulcões"
-                },
+                alternativas = new string[] { "Urbanização", "Geleiras", "Vulcões" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Medio
             },
@@ -139,50 +104,28 @@ public class QuizManager : MonoBehaviour
             // =========================
             // PERGUNTAS DIFÍCEIS
             // =========================
-
             new Pergunta
             {
                 enunciado = "Qual bioma ocupa quase metade do território brasileiro?",
-                alternativas = new string[]
-                {
-                    "Cerrado",
-                    "Caatinga",
-                    "Amazônia"
-                },
+                alternativas = new string[] { "Cerrado", "Caatinga", "Amazônia" },
                 respostaCorreta = 2,
                 dificuldade = Dificuldade.Dificil
             },
-
             new Pergunta
             {
                 enunciado = "O bioma Pampa está localizado principalmente em qual região?",
-                alternativas = new string[]
-                {
-                    "Sul",
-                    "Norte",
-                    "Nordeste"
-                },
+                alternativas = new string[] { "Sul", "Norte", "Nordeste" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Dificil
             },
-
             new Pergunta
             {
                 enunciado = "Qual bioma sofre com queimadas frequentes?",
-                alternativas = new string[]
-                {
-                    "Cerrado",
-                    "Pantanal",
-                    "Todos os anteriores"
-                },
+                alternativas = new string[] { "Cerrado", "Pantanal", "Todos os anteriores" },
                 respostaCorreta = 2,
                 dificuldade = Dificuldade.Dificil
             }
         };
-
-        // =========================
-        // SEPARA POR DIFICULDADE
-        // =========================
 
         List<Pergunta> faceis = new List<Pergunta>();
         List<Pergunta> medias = new List<Pergunta>();
@@ -190,34 +133,14 @@ public class QuizManager : MonoBehaviour
 
         foreach (Pergunta p in todasPerguntas)
         {
-            if (p.dificuldade == Dificuldade.Facil)
-            {
-                faceis.Add(p);
-            }
-            else if (p.dificuldade == Dificuldade.Medio)
-            {
-                medias.Add(p);
-            }
-            else
-            {
-                dificeis.Add(p);
-            }
+            if (p.dificuldade == Dificuldade.Facil) faceis.Add(p);
+            else if (p.dificuldade == Dificuldade.Medio) medias.Add(p);
+            else dificeis.Add(p);
         }
-
-        // =========================
-        // EMBARALHA CADA LISTA
-        // =========================
 
         Embaralhar(faceis);
         Embaralhar(medias);
         Embaralhar(dificeis);
-
-        // =========================
-        // PEGA:
-        // 1 FÁCIL
-        // 1 MÉDIA
-        // 1 DIFÍCIL
-        // =========================
 
         perguntas = new Pergunta[]
         {
@@ -234,7 +157,6 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < lista.Count; i++)
         {
             int randomIndex = Random.Range(i, lista.Count);
-
             Pergunta temp = lista[i];
             lista[i] = lista[randomIndex];
             lista[randomIndex] = temp;
@@ -244,7 +166,6 @@ public class QuizManager : MonoBehaviour
     void MostrarPergunta()
     {
         Pergunta p = perguntas[perguntaAtual];
-
         textoPergunta.text = p.enunciado;
 
         for (int i = 0; i < p.alternativas.Length; i++)
@@ -255,29 +176,15 @@ public class QuizManager : MonoBehaviour
 
     public void Responder(int indice)
     {
-
         contador++;
 
         if (indice == perguntas[perguntaAtual].respostaCorreta)
         {
             Debug.Log("Acertou!");
 
-            // =========================
-            // PONTUAÇÃO POR DIFICULDADE
-            // =========================
-
-            if (perguntas[perguntaAtual].dificuldade == Dificuldade.Facil)
-            {
-                pontuacao += 10;
-            }
-            else if (perguntas[perguntaAtual].dificuldade == Dificuldade.Medio)
-            {
-                pontuacao += 20;
-            }
-            else if (perguntas[perguntaAtual].dificuldade == Dificuldade.Dificil)
-            {
-                pontuacao += 30;
-            }
+            if (perguntas[perguntaAtual].dificuldade == Dificuldade.Facil) pontuacaoBioma += 10;
+            else if (perguntas[perguntaAtual].dificuldade == Dificuldade.Medio) pontuacaoBioma += 20;
+            else if (perguntas[perguntaAtual].dificuldade == Dificuldade.Dificil) pontuacaoBioma += 30;
         }
         else
         {
@@ -292,19 +199,58 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
-            FinalizarQuiz();
+            ExibirPainelParabens(); 
         }
     }
 
-    void FinalizarQuiz()
+// ========================================================
+    // ATIVA O POP-UP DE RESULTADOS (Salva no escopo do jogador atual)
+    // ========================================================
+void ExibirPainelParabens()
     {
-        Debug.Log("Fim do quiz!");
-        Debug.Log("Pontuação final: " + pontuacao);
+        string nomeJogadorAtual = "Jogador";
+        if (GameHandler.instance != null && !string.IsNullOrEmpty(GameHandler.instance.nomeJogador))
+        {
+            nomeJogadorAtual = GameHandler.instance.nomeJogador.Trim();
+        }
 
-        // 👇 salva nome + pontuação no ranking
-        RankingManager.instance.SalvarPontuacao(pontuacao);
+        // 💡 PADRONIZAÇÃO: Chave em minúsculo aqui também!
+        string chaveSalvamento = "Pontos_" + nomeJogadorAtual.ToLower();
 
-        // 👇 vai para a cena do ranking
-        
+        int pontuacaoAcumuladaAnterior = 0;
+        if (PlayerPrefs.HasKey(chaveSalvamento))
+        {
+            pontuacaoAcumuladaAnterior = PlayerPrefs.GetInt(chaveSalvamento);
+        }
+
+        int novaPontuacaoTotal = pontuacaoAcumuladaAnterior + pontuacaoBioma;
+
+        PlayerPrefs.SetInt(chaveSalvamento, novaPontuacaoTotal);
+        PlayerPrefs.Save();
+
+        // 6. Atualiza a interface do Pop-up
+if (textoResultadoFinal != null)
+{
+    // Usamos as tags <align=center> e <b> para garantir a formatação por código
+    // O tamanho da fonte pode ser controlado diretamente no componente, mas forçamos aqui para garantir
+    textoResultadoFinal.text = $"<align=center><b>Parabéns!</b>\n" +
+                               $"Você concluiu o Quiz sobre a Amazônia!\n\n" +
+                               $"Sua pontuação no Bioma: <color=green>{pontuacaoBioma} pts</color>\n" +
+                               $"Sua Pontuação Total: <color=yellow>{novaPontuacaoTotal} pts</color></b></align>";
+}
+
+if (painelResultadoFinal != null)
+{
+    painelResultadoFinal.SetActive(true);
+}
+    }
+
+    // ========================================================
+    // BOTÃO FINALIZAR (Chama a cena do Ranking para mostrar o placar)
+    // ========================================================
+    public void BotaoFinalizarCena()
+    {
+        Debug.Log("Indo para a cena de Ranking...");
+        SceneManager.LoadScene("CenaRanking"); // Certifique-se de usar o nome correto da sua cena aqui
     }
 }
