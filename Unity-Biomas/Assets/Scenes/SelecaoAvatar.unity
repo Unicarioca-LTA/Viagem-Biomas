@@ -348,7 +348,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: SelecaoBioma
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &195574357
@@ -1522,6 +1522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelecaoManager
   campoNome: {fileID: 412177222}
+  textoAvisoErro: {fileID: 0}
 --- !u!4 &1029261600
 Transform:
   m_ObjectHideFlags: 0
@@ -1832,14 +1833,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Jogar
-        m_Mode: 1
+        m_MethodName: CarregarCena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Frase
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1705136096
@@ -1985,6 +1986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorMenu
   painelAmazonia: {fileID: 0}
+  painelCerrado: {fileID: 0}
 --- !u!4 &1927107929
 Transform:
   m_ObjectHideFlags: 0

@@ -9,49 +9,69 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // =========================
+        // CENA DE SELEÇÃO DE BIOMA
+        // =========================
+
         if (SceneManager.GetActiveScene().name == "SelecaoBioma")
         {
-            // 🚀 SEGURANÇA: Verifica se as referências dos botões foram arrastadas no Inspector
+            // Verifica se os botões foram associados
             if (painelAmazonia != null && painelCerrado != null)
             {
-                // Bloco da Amazônia
-                if (GameUtility.BotaoPainel == false)
+                // AMAZÔNIA
+                if (GameUtility.AmazoniaLiberada == false)
                 {
                     painelAmazonia.interactable = false;
                 }
 
-                // Bloco do Cerrado (Adicionado com base na Amazônia)
-                if (GameUtility.BotaoPainel == false)
+                // CERRADO
+                if (GameUtility.CerradoLiberado == false)
                 {
                     painelCerrado.interactable = false;
                 }
             }
             else
             {
-                Debug.LogWarning("GameManager: Lembre-se de associar os botões painelAmazonia e painelCerrado no Inspector da cena SelecaoBioma.");
+                Debug.LogWarning("Associe os botões no Inspector.");
             }
         }
 
+        // =========================
+        // CENA DE SELEÇÃO DE AVATAR
+        // =========================
+
         if (SceneManager.GetActiveScene().name == "SelecaoAvatar")
         {
-            GameUtility.BotaoPainel = true;
+            GameUtility.AmazoniaLiberada = true;
+            GameUtility.CerradoLiberado = true;
         }
     }
+
 
     public void CarregarCena(string nomeCena)
     {
         SceneManager.LoadScene(nomeCena);
     }
 
-    public void DesativarAmazonia()
+        public void DesativarAmazonia()
     {
-        GameUtility.BotaoPainel = false;
+        GameUtility.AmazoniaLiberada = false;
+
+        if (painelAmazonia != null)
+        {
+            painelAmazonia.interactable = false;
+        }
     }
 
     public void DesativarCerrado()
     {
-        GameUtility.BotaoPainel = false;
+    GameUtility.CerradoLiberado = false;
+
+    if (painelCerrado != null)
+    {
+        painelCerrado.interactable = false;
     }
+    }   
 
     public void IniciarJogo()
     {

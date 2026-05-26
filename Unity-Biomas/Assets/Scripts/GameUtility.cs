@@ -1,20 +1,10 @@
 using UnityEngine;
 
-public class GameUtility : MonoBehaviour
-
+public static class GameUtility
 {
-    public static bool BotaoPainel = true;
+    public static bool AmazoniaLiberada = true;
+    public static bool CerradoLiberado = true;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static bool BotaoAmazonia = true;
+    public static bool BotaoCerrado = true;
 }
