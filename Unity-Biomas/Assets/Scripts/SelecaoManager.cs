@@ -9,6 +9,9 @@ public class SelecaoManager : MonoBehaviour {
     [Header("Configuração de Feedback (Opcional)")]
     public TextMeshProUGUI textoAvisoErro; // Arraste um texto aqui se quiser avisar visualmente o jogador
 
+    [Header("Configuração do Pop-up de Nome Repetido")]
+    public GameObject painelJogadorRepetido; // 👈 NOVO: Arraste o MESMO painel ou uma cópia dele aqui no Inspector
+
     public void SelecionarAvatar(AvatarData dados) {
         if (GameHandler.instance != null) {
             GameHandler.instance.avatarSelecionado = dados;
@@ -36,9 +39,9 @@ public class SelecaoManager : MonoBehaviour {
             return; // 🛑 Bloqueia o avanço
         }
 
-        // 2. 🚀 NOVO BLOQUEIO: Verifica se o nome já existe no histórico do ranking
+        // 2. 🚀 BLOQUEIO ATUALIZADO: Verifica se o nome já existe e abre o PAINEL
         if (NomeJaExisteNoRanking(nomeDigitado)) {
-            ExibirAviso("Este nome já está registrado no Ranking! Escolha outro.");
+            AbrirPainelJogadorRepetido(); // 👈 MODIFICADO: Chama o painel visual
             return; // 🛑 Bloqueia o avanço para não duplicar ou misturar dados
         }
 
@@ -54,7 +57,6 @@ public class SelecaoManager : MonoBehaviour {
     // FUNÇÃO AUXILIAR: Varre o JSON do ranking procurando o nome
     // ========================================================
     private bool NomeJaExisteNoRanking(string nomeParaVerificar) {
-        // Se não existir nenhuma chave de ranking ainda, o nome está liberado
         if (!PlayerPrefs.HasKey("Ranking")) {
             return false; 
         }
@@ -64,10 +66,9 @@ public class SelecaoManager : MonoBehaviour {
             Ranking rankingSalvo = JsonUtility.FromJson<Ranking>(json);
 
             if (rankingSalvo != null && rankingSalvo.jogadores != null) {
-                // Percorre a lista de jogadores ignorando maiúsculas e minúsculas
                 foreach (Jogador j in rankingSalvo.jogadores) {
                     if (j.nome.ToLower() == nomeParaVerificar.ToLower()) {
-                        return true; // Encontrou um nome igual!
+                        return true; 
                     }
                 }
             }
@@ -76,17 +77,35 @@ public class SelecaoManager : MonoBehaviour {
             Debug.LogError("Erro ao ler o arquivo de Ranking para validação de nome: " + e.Message);
         }
 
-        return false; // Nome está limpo e disponível
+        return false; 
+    }
+
+    // ========================================================
+    // CONTROLES DO PAINEL DE JOGADOR REPETIDO (CENA DE SELEÇÃO)
+    // ========================================================
+    public void AbrirPainelJogadorRepetido() {
+        if (painelJogadorRepetido != null) {
+            painelJogadorRepetido.SetActive(true);
+        } else {
+            // Caso você esqueça de arrastar no Inspector, ele usa o aviso antigo para não quebrar o jogo
+            ExibirAviso("Este nome já está registrado no Ranking! Escolha outro.");
+        }
+    }
+
+    public void FecharPainelJogadorRepetido() {
+        if (painelJogadorRepetido != null) {
+            painelJogadorRepetido.SetActive(false);
+        }
     }
 
     // ========================================================
     // FUNÇÃO AUXILIAR: Centraliza a exibição de logs e textos de erro
     // ========================================================
-    private void ExibirAviso(string mensagem) {
+private void ExibirAviso(string mensagem) {
         Debug.LogWarning(mensagem);
 
         if (textoAvisoErro != null) {
-            textoAvisoErro.text = mensagem;
+            textoAvisoErro.text = mensagem; 
             textoAvisoErro.gameObject.SetActive(true);
         }
     }
