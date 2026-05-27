@@ -3,14 +3,23 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 public class SelecaoManager : MonoBehaviour {
-    // Mantemos como public para você conferir no Inspector
+    
     public TMP_InputField campoNome; 
 
-    [Header("Configuração de Feedback (Opcional)")]
-    public TextMeshProUGUI textoAvisoErro; // Arraste um texto aqui se quiser avisar visualmente o jogador
+    [Header("Configuração de Feedback (Antigo/Texto)")]
+    public TextMeshProUGUI textoAvisoErro; 
 
-    [Header("Configuração do Pop-up de Nome Repetido")]
-    public GameObject painelJogadorRepetido; // 👈 NOVO: Arraste o MESMO painel ou uma cópia dele aqui no Inspector
+    [Header("PAINEL 1: Nome Repetido")]
+    public GameObject painelJogadorRepetido; // Arraste o painel de nome repetido aqui
+
+    [Header("PAINEL 2: Nome em Branco")]
+    public GameObject painelNomeEmBranco;    // Arraste o painel de campo vazio aqui
+
+    [Header("PAINEL 3: Voltar")]
+    public GameObject painelVoltar;    // Arraste o painel de campo vazio aqui
+
+    [Header("PAINEL 4: Sair")]
+    public GameObject painelSair;    // Arraste o painel de campo vazio aqui
 
     public void SelecionarAvatar(AvatarData dados) {
         if (GameHandler.instance != null) {
@@ -20,12 +29,10 @@ public class SelecaoManager : MonoBehaviour {
     }
 
     public void AvancarCena() {
-        // Se por algum motivo a referência se perdeu, tentamos encontrar agora
         if (campoNome == null) {
             campoNome = GameObject.FindFirstObjectByType<TMP_InputField>();
         }
 
-        // Se ainda assim for nulo, damos um erro específico
         if (campoNome == null) {
             Debug.LogError("ERRO: O sistema não encontrou nenhum campo de texto na cena para ler o nome!");
             return;
@@ -33,19 +40,19 @@ public class SelecaoManager : MonoBehaviour {
 
         string nomeDigitado = campoNome.text.Trim();
 
-        // 1. Verifica se o jogador deixou o campo em branco
+        // 1. 🛑 VALIDAÇÃO 1: Verifica se o jogador deixou o campo em branco
         if (string.IsNullOrEmpty(nomeDigitado)) {
-            ExibirAviso("Por favor, digite o seu nome antes de continuar.");
-            return; // 🛑 Bloqueia o avanço
+            AbrirPainelNomeEmBranco(); // 👈 Abre o painel específico de campo vazio
+            return; 
         }
 
-        // 2. 🚀 BLOQUEIO ATUALIZADO: Verifica se o nome já existe e abre o PAINEL
+        // 2. 🛑 VALIDAÇÃO 2: Verifica se o nome já existe no histórico do ranking
         if (NomeJaExisteNoRanking(nomeDigitado)) {
-            AbrirPainelJogadorRepetido(); // 👈 MODIFICADO: Chama o painel visual
-            return; // 🛑 Bloqueia o avanço para não duplicar ou misturar dados
+            AbrirPainelJogadorRepetido(); // 👈 Abre o painel específico de nome repetido
+            return; 
         }
 
-        // 3. Se passou pelas validações, salva e avança
+        // 3. Se passou pelas duas validações, salva e avança
         if (GameHandler.instance != null) {
             GameHandler.instance.nomeJogador = nomeDigitado;
             Debug.Log("Nome salvo: " + nomeDigitado);
@@ -81,13 +88,12 @@ public class SelecaoManager : MonoBehaviour {
     }
 
     // ========================================================
-    // CONTROLES DO PAINEL DE JOGADOR REPETIDO (CENA DE SELEÇÃO)
+    // CONTROLES EXCLUSIVOS DO PAINEL 1: JOGADOR REPETIDO
     // ========================================================
     public void AbrirPainelJogadorRepetido() {
         if (painelJogadorRepetido != null) {
             painelJogadorRepetido.SetActive(true);
         } else {
-            // Caso você esqueça de arrastar no Inspector, ele usa o aviso antigo para não quebrar o jogo
             ExibirAviso("Este nome já está registrado no Ranking! Escolha outro.");
         }
     }
@@ -99,9 +105,60 @@ public class SelecaoManager : MonoBehaviour {
     }
 
     // ========================================================
-    // FUNÇÃO AUXILIAR: Centraliza a exibição de logs e textos de erro
+    // CONTROLES EXCLUSIVOS DO PAINEL 2: NOME EM BRANCO
     // ========================================================
-private void ExibirAviso(string mensagem) {
+    public void AbrirPainelNomeEmBranco() {
+        if (painelNomeEmBranco != null) {
+            painelNomeEmBranco.SetActive(true);
+        } else {
+            ExibirAviso("Por favor, digite o seu nome antes de continuar.");
+        }
+    }
+
+    public void FecharPainelNomeEmBranco() {
+        if (painelNomeEmBranco != null) {
+            painelNomeEmBranco.SetActive(false);
+        }
+    }
+
+     // ========================================================
+    // CONTROLES EXCLUSIVOS DO PAINEL 3: VOLTA SELECAOBIOMA
+    // ========================================================
+    public void AbrirPainelVoltar() {
+        if (painelVoltar != null) {
+            painelVoltar.SetActive(true);
+        } else {
+            ExibirAviso("Tem certeza que deseja voltar? Todo seu progresso será perdido.");
+        }
+    }
+
+    public void FecharPainelVoltar() {
+        if (painelVoltar != null) {
+            painelVoltar.SetActive(false);
+        }
+    }
+
+     // ========================================================
+    // CONTROLES EXCLUSIVOS DO PAINEL 4: SAIR
+    // ========================================================
+    public void AbrirPainelSair() {
+        if (painelSair != null) {
+            painelSair.SetActive(true);
+        } else {
+            ExibirAviso("Tem certeza que deseja sair? Isso fechará o jogo.");
+        }
+    }
+
+    public void FecharPainelSair() {
+        if (painelSair != null) {
+            painelSair.SetActive(false);
+        }
+    }
+
+    // ========================================================
+    // FUNÇÃO AUXILIAR: Texto de fallback (caso falte o objeto no Inspector)
+    // ========================================================
+    private void ExibirAviso(string mensagem) {
         Debug.LogWarning(mensagem);
 
         if (textoAvisoErro != null) {

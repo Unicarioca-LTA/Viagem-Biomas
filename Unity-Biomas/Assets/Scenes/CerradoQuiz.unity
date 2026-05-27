@@ -1489,6 +1489,7 @@ MonoBehaviour:
   campoNome: {fileID: 0}
   textoAvisoErro: {fileID: 0}
   painelJogadorRepetido: {fileID: 0}
+  painelNomeEmBranco: {fileID: 0}
 --- !u!4 &1006510564
 Transform:
   m_ObjectHideFlags: 0
@@ -2089,7 +2090,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1927107928}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Amazonia
+        m_MethodName: Cerrado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

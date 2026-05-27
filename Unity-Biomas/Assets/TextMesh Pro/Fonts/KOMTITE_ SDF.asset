@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!28 &-8696516218391741386
+--- !u!28 &-4103651836035754280
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KOMTIT__ SDF Atlas
+  m_Name: KOMTITE_ SDF Atlas
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -56,39 +56,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: KOMTIT__ SDF
+  m_Name: KOMTITE_ SDF
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_FontAsset
   m_Version: 1.1.0
   m_FaceInfo:
     m_FaceIndex: 0
-    m_FamilyName: Komika Title
+    m_FamilyName: Komika Title - Emboss
     m_StyleName: Regular
-    m_PointSize: 111
+    m_PointSize: 114
     m_Scale: 1
     m_UnitsPerEM: 1000
-    m_LineHeight: 158.508
-    m_AscentLine: 125.09699
-    m_CapLine: 86
+    m_LineHeight: 159.03
+    m_AscentLine: 126.768
+    m_CapLine: 84
     m_MeanLine: 86
     m_Baseline: 0
-    m_DescentLine: -30.081
-    m_SuperscriptOffset: 125.09699
+    m_DescentLine: -28.842001
+    m_SuperscriptOffset: 126.768
     m_SuperscriptSize: 0.5
-    m_SubscriptOffset: -30.081
+    m_SubscriptOffset: -28.842001
     m_SubscriptSize: 0.5
-    m_UnderlineOffset: -13.874999
-    m_UnderlineThickness: 5.5499997
+    m_UnderlineOffset: -14.25
+    m_UnderlineThickness: 5.7000003
     m_StrikethroughOffset: 34.4
-    m_StrikethroughThickness: 5.5499997
+    m_StrikethroughThickness: 5.7000003
     m_TabWidth: 27
-  m_Material: {fileID: 2363406030000907250}
-  m_SourceFontFileGUID: c6f5c10a82109fc449ccc33789682e98
+  m_Material: {fileID: 7304030424967869441}
+  m_SourceFontFileGUID: 422f749853c85e14f99879ca0d6f1b93
   m_CreationSettings:
     sourceFontFileName: 
-    sourceFontFileGUID: c6f5c10a82109fc449ccc33789682e98
+    sourceFontFileGUID: 422f749853c85e14f99879ca0d6f1b93
     faceIndex: 0
     pointSizeSamplingMode: 0
-    pointSize: 111
+    pointSize: 114
     padding: 9
     paddingMode: 2
     packingMode: 0
@@ -101,20 +101,20 @@ MonoBehaviour:
       \xC9 \xCA \xCD \xD3 \xD4 \xD5 \xDA \xDC \xC7 \xE0 \xE1 \xE2 \xE3 \xE9 \xEA
       \xED \xF3 \xF4 \xF5 \xFA \xFC \xE7 \xA1 \xBF \xAA \xBA \xA2 \xA3 \u20AC \xA7
       \xA9 \xAE \u2122 \xB0 \xB1 \xB2 \xB3 \xD7 \xF7 \xB9"
-    referencedFontAssetGUID: 1f245065bdc961f418773101d2fec325
+    referencedFontAssetGUID: 14e52a2cd7ac3074f9d94411a38edac3
     referencedTextAssetGUID: 
     fontStyle: 0
     fontStyleModifier: 0
     renderMode: 4165
     includeFontFeatures: 0
-  m_SourceFontFile: {fileID: 12800000, guid: c6f5c10a82109fc449ccc33789682e98, type: 3}
+  m_SourceFontFile: {fileID: 12800000, guid: 422f749853c85e14f99879ca0d6f1b93, type: 3}
   m_SourceFontFilePath: 
   m_AtlasPopulationMode: 1
   InternalDynamicOS: 0
   m_GlyphTable: []
   m_CharacterTable: []
   m_AtlasTextures:
-  - {fileID: -8696516218391741386}
+  - {fileID: -4103651836035754280}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_GetFontFeatures: 1
@@ -192,14 +192,14 @@ MonoBehaviour:
     kerningPairs: []
   fallbackFontAssets: []
   atlas: {fileID: 0}
---- !u!21 &2363406030000907250
+--- !u!21 &7304030424967869441
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KOMTIT__ Atlas Material
+  m_Name: KOMTITE_ Atlas Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -228,7 +228,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: -8696516218391741386}
+        m_Texture: {fileID: -4103651836035754280}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
