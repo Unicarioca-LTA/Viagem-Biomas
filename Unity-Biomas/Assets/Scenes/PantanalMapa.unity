@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: VOLTAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}
+  m_sharedMaterial: {fileID: -4932870387541299705, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,8 +203,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -594,6 +594,9 @@ MonoBehaviour:
   campoNome: {fileID: 0}
   textoAvisoErro: {fileID: 0}
   painelJogadorRepetido: {fileID: 0}
+  painelNomeEmBranco: {fileID: 0}
+  painelVoltar: {fileID: 0}
+  painelSair: {fileID: 0}
 --- !u!4 &1006510564
 Transform:
   m_ObjectHideFlags: 0
