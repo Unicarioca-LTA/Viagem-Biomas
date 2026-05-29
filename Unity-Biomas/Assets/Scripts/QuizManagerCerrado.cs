@@ -44,75 +44,149 @@ public class QuizManagerCerrado : MonoBehaviour
             // =========================
             new Pergunta
             {
-                enunciado = "O Cerrado é considerado qual tipo de vegetação?",
-                alternativas = new string[] { "Savana", "Floresta Tropical", "Tundra" },
-                respostaCorreta = 0,
-                dificuldade = Dificuldade.Facil
-            },
-            new Pergunta
-            {
-                enunciado = "Qual destas frutas é típica e muito famosa no Cerrado?",
-                alternativas = new string[] { "Açaí", "Pequi", "Cupuaçu" },
+                enunciado = "O Cerrado é conhecido como o segundo maior bioma do Brasil. Qual é o seu tipo de vegetação predominante?",
+                alternativas = new string[] { "Árvores gigantes e floresta muito fechada", "Árvores baixas de troncos retorcidos e arbustos", "Vegetação composta apenas por grama e sem árvores" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Facil
             },
             new Pergunta
             {
-                enunciado = "Qual é a principal característica das árvores do Cerrado?",
-                alternativas = new string[] { "Troncos tortuosos e casca grossa", "Muito altas e retas", "Folhas gigantes e perenes" },
+                enunciado = "Como é o clima no Cerrado durante a maior parte do ano?",
+                alternativas = new string[] { "Sempre chuvoso e frio em todas as estações", "Clima tropical, com um período de chuvas e outro de seca", "Desértico, sem nenhuma chuva durante o ano" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Facil
+            },
+            new Pergunta
+            {
+                enunciado = "Qual destes animais típicos do Cerrado corre risco de extinção devido à destruição do seu habitat?",
+                alternativas = new string[] { "Elefante", "Tamanduá-bandeira", "Leão" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Facil
+            },
+            new Pergunta
+            {
+                enunciado = "O Cerrado é famoso por suas flores coloridas. Qual destas árvores é um símbolo do bioma?",
+                alternativas = new string[] { "Ipê-amarelo", "Pinheiro-do-paraná", "Macieira" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Facil
             },
+
 
             // =========================
             // PERGUNTAS MÉDIAS (Cerrado)
             // =========================
             new Pergunta
             {
-                enunciado = "Qual animal símbolo do Cerrado corre risco de extinção e tem pernas longas?",
-                alternativas = new string[] { "Mico-leão-dourado", "Lobo-guará", "Onça-pintada" },
+                enunciado = "Por que muitas plantas do Cerrado possuem cascas grossas e raízes muito profundas?",
+                alternativas = new string[] { "Para se protegerem do frio intenso e da neve", "Para sobreviverem aos períodos de seca e incêndios naturais", "Para evitarem que os animais comam seus frutos" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Medio
             },
             new Pergunta
             {
-                enunciado = "O Cerrado é considerado o 'Berço das Águas' do Brasil por quê?",
-                alternativas = new string[] { "Chove o ano inteiro sem parar", "Abriga nascentes de grandes bacias hidrográficas", "É coberto por grandes lagos" },
+                enunciado = "O solo do Cerrado é naturalmente ácido e pobre em nutrientes. O que ele precisa para ser usado na agricultura?",
+                alternativas = new string[] { "Apenas de água em abundância", "De adubação e tratamento para corrigir a acidez (calagem)", "Não precisa de nada, pois o solo é perfeito para o plantio" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Medio
             },
             new Pergunta
             {
-                enunciado = "Qual o tipo de clima predominante no Cerrado?",
-                alternativas = new string[] { "Equatorial úmido", "Tropical sazonal (chuvoso e seco)", "Semiárido" },
+                enunciado = "O Cerrado é chamado de 'caixa d'água do Brasil'. Qual o principal motivo desse apelido?",
+                alternativas = new string[] { "Porque é o bioma onde mais chove no mundo todo", "Porque abriga nascentes de importantes rios brasileiros", "Porque possui as maiores cachoeiras do planeta" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Qual atividade humana é considerada a maior ameaça atual para a preservação do Cerrado",
+                alternativas = new string[] { "O desmatamento para a expansão da agropecuária", "A construção de cidades de gelo", "A plantação de florestas de seringueiras" },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Sobre as águas do Cerrado, qual problema ambiental grave tem ocorrido devido à agricultura intensa?",
+                alternativas = new string[] { "O congelamento total dos rios", "A contaminação por agrotóxicos", "O aumento excessivo de peixes nos rios" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Além do tamanduá-bandeira, qual destes animais também sofre com a perda de biodiversidade no Cerrado?",
+                alternativas = new string[] { "Tatu-bola", "Urso-polar", "Canguru" },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "O Cerrado é conhecido como a 'savana mais rica do mundo'. Qual planta é muito comum no bioma e produz um fruto amarelado muito usado na culinária regional?",
+                alternativas = new string[] { "Açaí", "Cacau", "Pequi" },
+                respostaCorreta = 2,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Devido à sua localização estratégica no centro do Brasil, o Cerrado abriga as nascentes de grandes bacias hidrográficas. Qual é o apelido que o bioma recebe por causa disso?",
+                alternativas = new string[] { "Ilha de Calor", "Pantanal Seco", "Berço das Águas" },
+                respostaCorreta = 2,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Um dos animais mais elegantes do Cerrado possui pernas longas e pelagem avermelhada. De qual animal estamos falando?",
+                alternativas = new string[] { "Cachorro-do-mato", "Onça-parda", "Lobo-guará" },
+                respostaCorreta = 2,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "O solo do Cerrado é rico em alguns minerais que podem dificultar o crescimento de certas plantas. Quais são os dois elementos principais encontrados em abundância nesse solo",
+                alternativas = new string[] { "Sal e Magnésio", "Alumínio e Ferro", "Ouro e Prata" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Medio
             },
 
+      
+      
             // =========================
             // PERGUNTAS DIFÍCEIS (Cerrado)
             // =========================
             new Pergunta
             {
-                enunciado = "Em termos de extensão territorial no Brasil, o Cerrado ocupa qual posição?",
-                alternativas = new string[] { "1º maior", "2º maior", "3º maior" },
+                enunciado = "O Cerrado é frequentemente chamado de 'Floresta de Cabeça para Baixo'. Qual característica biológica justifica esse nome?",
+                alternativas = new string[] { "As árvores crescem com os galhos voltados para o solo para evitar o sol", "O bioma possui raízes extremamente profundas e extensas, que superam o tamanho da parte aérea", "As plantas realizam fotossíntese apenas durante a noite para economizar energia" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Dificil
             },
             new Pergunta
             {
-                enunciado = "Qual o principal fator abiótico natural que moldou a evolução da flora do Cerrado?",
-                alternativas = new string[] { "O fogo/queimadas naturais", "O congelamento do solo", "Inundações constantes" },
+                enunciado = "Os solos do Cerrado são predominantemente latossolos antigos. Qual é o impacto químico natural dessa característica na vegetação?",
+                alternativas = new string[] { "Alta concentração de alumínio e ferro, o que torna o solo ácido e de baixa fertilidade", "Excesso de nutrientes orgânicos que dispensa qualquer tipo de adubação", "Solo rico em calcário natural, que mantém o pH sempre neutro" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Dificil
             },
             new Pergunta
             {
-                enunciado = "Como é classificado o solo predominante do Cerrado?",
-                alternativas = new string[] { "Rico em matéria orgânica", "Ácido e rico em ferro e alumínio", "Calcário e muito fértil" },
+                enunciado = "O Cerrado desempenha um papel hidrográfico crucial para o continente sul-americano. Por que sua preservação afeta a geração de energia em outros estados?",
+                alternativas = new string[] { "Porque o bioma funciona como um reservatório que alimenta as nascentes de grandes bacias hidrográficas", "Porque o Cerrado é o único bioma brasileiro onde os rios nunca sofrem com a seca", "Porque a vegetação do Cerrado atrai nuvens de chuva diretamente para as turbinas das hidrelétricas" },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Dificil
+            },
+            new Pergunta
+            {
+                enunciado = "Muitas plantas do Cerrado são 'pirófitas'. O que isso significa no contexto da dinâmica deste bioma",
+                alternativas = new string[] { "São plantas que morrem imediatamente ao primeiro sinal de fumaça", "São espécies que possuem mecanismos de resistência ou que até dependem do fogo natural para a quebra de dormência de sementes", "São plantas aquáticas que surgem apenas nos períodos de inundação das chapadas" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Dificil
-            }
+            },
+            new Pergunta
+            {
+                enunciado = "Qual é a principal consequência ambiental da substituição da vegetação nativa por monoculturas de ciclo curto (como a soja) em relação ao ciclo da água",
+                alternativas = new string[] { "Aumento da infiltração da água, tornando o solo muito encharcado o ano todo", "Diminuição da recarga dos aquíferos, pois as plantas de ciclo curto não possuem as raízes profundas que levam a água para o subsolo", "Resfriamento imediato das temperaturas locais devido à cor verde das plantações" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Dificil
+            },
+
         };
 
         List<Pergunta> faceis = new List<Pergunta>();

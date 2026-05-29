@@ -56,22 +56,29 @@ public class QuizManager : MonoBehaviour
             // =========================
             new Pergunta
             {
-                enunciado = "Qual é o maior bioma do Brasil?",
-                alternativas = new string[] { "Amazônia", "Cerrado", "Caatinga" },
+                enunciado = "Qual é a principal característica do clima na Floresta Amazônica?",
+                alternativas = new string[] { "Frio e seco, com neve no inverno", "Quente e muito úmido, com chuvas frequentes", "Temperado, com estações do ano bem definidas" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Facil
+            },
+            new Pergunta
+            {
+                enunciado = "A Amazônia é considerada a maior floresta tropical do mundo. Quanto do território brasileiro ela ocupa aproximadamente?",
+                alternativas = new string[] { "Quase metade (49%)", "Uma pequena parte (10%)", "Apenas a região litorânea (5%)" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Facil
             },
             new Pergunta
             {
-                enunciado = "O Cerrado é conhecido como:",
-                alternativas = new string[] { "Savana brasileira", "Floresta congelada", "Deserto" },
-                respostaCorreta = 0,
+                enunciado = "Qual destas frutas é nativa da Amazônia e muito usada em sucos e tigelas?",
+                alternativas = new string[] { "Jabuticaba", "Açaí", "Pera" },
+                respostaCorreta = 1,
                 dificuldade = Dificuldade.Facil
             },
             new Pergunta
             {
-                enunciado = "Qual bioma possui clima muito úmido?",
-                alternativas = new string[] { "Pantanal", "Amazônia", "Pampa" },
+                enunciado = "Qual destes animais é um símbolo da fauna amazônica?",
+                alternativas = new string[] { "Pinguim", "Arara-canindé", "Camelo" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Facil
             },
@@ -81,50 +88,129 @@ public class QuizManager : MonoBehaviour
             // =========================
             new Pergunta
             {
-                enunciado = "Qual bioma brasileiro possui vegetação adaptada à seca?",
-                alternativas = new string[] { "Caatinga", "Mata Atlântica", "Pantanal" },
-                respostaCorreta = 0,
-                dificuldade = Dificuldade.Medio
-            },
-            new Pergunta
-            {
-                enunciado = "O Pantanal é conhecido principalmente por:",
-                alternativas = new string[] { "Neve intensa", "Áreas alagadas", "Grandes montanhas" },
+                enunciado = "Sobre o solo da Amazônia, é correto afirmar que: ",
+                alternativas = new string[] { "É extremamente rico em nutrientes e minerais por natureza", "É pobre em nutrientes, pois a maior parte da riqueza está nas próprias plantas", "É um solo desértico onde poucas plantas conseguem crescer" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Medio
             },
             new Pergunta
             {
-                enunciado = "A Mata Atlântica foi muito afetada por:",
-                alternativas = new string[] { "Urbanização", "Geleiras", "Vulcões" },
+                enunciado = "Por que a Amazônia é importante para o clima de outras regiões do Brasil?",
+                alternativas = new string[] { "Porque ela impede que o vento chegue ao Sul", "Porque ela ajuda a regular as chuvas em quase todo o país", "Porque ela esfria o oceano Atlântico" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Se você olhar um mapa do Brasil, em qual região a maior parte do bioma Amazônia está localizada? ",
+                alternativas = new string[] { "Região Sul", "Região Nordeste", "Região Norte" },
+                respostaCorreta = 2,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Qual é uma das maiores ameaças atuais à preservação da Floresta Amazônica? ",
+                alternativas = new string[] { "O excesso de plantio de árvores nativas", "O desmatamento para expansão de garimpo ilegal e pecuária", "O turismo ecológico controlado" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Árvores como o mogno e a castanheira típicas da Amazônia são classificadas como:",
+                alternativas = new string[] { "Árvores de pequeno porte (arbustos)", "Árvores de grande porte", "Plantas rasteiras que não possuem tronco" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Qual é a porcentagem aproximada de vegetação original que a Amazônia ainda possui? ",
+                alternativas = new string[] { "Cerca de 80%", "Menos de 10%", "Já foi totalmente destruída" },
                 respostaCorreta = 0,
                 dificuldade = Dificuldade.Medio
             },
+            new Pergunta
+            {
+                enunciado = "A Floresta Amazônica possui árvores gigantescas. Uma delas é a Sumaúma. Por que ela é conhecida como a 'escada do céu'?",
+                alternativas = new string[] { "Porque suas raízes são tão grandes que formam degraus na floresta", "Porque ela é uma das árvores mais altas da floresta, podendo chegar a 60 metros de altura", "Porque seus galhos brilham durante a noite como estrelas" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "No bioma Amazônia, encontramos a Vitória-régia. O que ela é exatamente?",
+                alternativas = new string[] { "Uma ave muito colorida que vive nas copas das árvores", "Uma planta aquática com folhas circulares gigantes que flutuam nos rios", "Uma espécie de peixe que salta fora da água para comer frutos" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "O solo da Amazônia é pobre em nutrientes, mas a floresta é riquíssima. Como a floresta se alimenta?",
+                alternativas = new string[] { "Através da 'serrapilheira' que é a camada de folhas e galhos mortos que apodrecem e viram adubo rápido", "Através da água da chuva que já vem misturada com vitaminas do oceano", "Através do pó que vem dos vulcões vizinhos todos os dias" },
+                respostaCorreta = 0,
+                dificuldade = Dificuldade.Medio
+            },
+
+            new Pergunta
+            {
+                enunciado = "Além da extração de madeira, qual outra atividade ilegal causa grandes danos aos rios e à floresta?",
+                alternativas = new string[] { "A plantação de jardins de flores exóticas", "O garimpo ilegal, que polui as águas e destrói a mata", "A construção de pistas de patinação no gelo" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "Qual é a principal função da 'serrapilheira' (camada de folhas secas no chão) para a Amazônia?",
+                alternativas = new string[] { "Proteger o solo contra o frio extremo", "Reciclar nutrientes para alimentar a floresta", "Impedir que a chuva chegue às raízes" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+            new Pergunta
+            {
+                enunciado = "A bacia amazônica é famosa por qual recorde mundial?",
+                alternativas = new string[] { "Maior reserva de gelo do planeta", "Maior rede de rios de água doce do mundo", "Única região que não possui insetos" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Medio
+            },
+
 
             // =========================
             // PERGUNTAS DIFÍCEIS
             // =========================
             new Pergunta
             {
-                enunciado = "Qual bioma ocupa quase metade do território brasileiro?",
-                alternativas = new string[] { "Cerrado", "Caatinga", "Amazônia" },
+                enunciado = "A exuberância da vegetação amazônica contrasta com a baixa fertilidade natural de grande parte de seus solos. Qual processo ecológico é o principal responsável por manter a produtividade biológica do bioma?",
+                alternativas = new string[] { "A fixação de nitrogênio atmosférico pelas árvores de grande porte como o mogno", "O acúmulo milenar de minerais pesados no horizonte profundo do solo", "A ciclagem rápida de nutrientes através da decomposição da serrapilheira" },
                 respostaCorreta = 2,
                 dificuldade = Dificuldade.Dificil
             },
             new Pergunta
             {
-                enunciado = "O bioma Pampa está localizado principalmente em qual região?",
-                alternativas = new string[] { "Sul", "Norte", "Nordeste" },
-                respostaCorreta = 0,
+                enunciado = "A Amazônia influencia o regime de chuvas em regiões distantes, como o Sudeste do Brasil. Qual fenômeno explica essa conexão climática?",
+                alternativas = new string[] { "O bloqueio de ventos secos vindos do Oceano Pacífico pela Cordilheira dos Andes", "O transporte de umidade pela evapotranspiração, conhecido como 'rios voadores'", "A criação de zonas de alta pressão que empurram as nuvens para o sul" },
+                respostaCorreta = 1,
                 dificuldade = Dificuldade.Dificil
             },
             new Pergunta
             {
-                enunciado = "Qual bioma sofre com queimadas frequentes?",
-                alternativas = new string[] { "Cerrado", "Pantanal", "Todos os anteriores" },
+                enunciado = "O equilíbrio térmico da Amazônia é vital para o mundo. Como a floresta contribui diretamente para a mitigação do aquecimento global?",
+                alternativas = new string[] { "Pela liberação de oxigênio que se perde nas camadas superiores da atmosfera", "Pelo armazenamento de bilhões de toneladas de carbono na sua biomassa", "Através da produção de sementes que absorvem calor durante a germinação" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Dificil
+            },
+            new Pergunta
+            {
+                enunciado = "A vegetação amazônica é classificada como latifoliada e perenifólia. O que esses termos indicam sobre a adaptação das plantas ao meio?",
+                alternativas = new string[] { "Perda total das folhas durante a estação seca para economizar energia", "Folhas largas para captar luz e manutenção das folhas durante todo o ano", "Presença de espinhos e cascas grossas para proteção contra incêndios naturais" },
+                respostaCorreta = 1,
+                dificuldade = Dificuldade.Dificil
+            },
+            new Pergunta
+            {
+                enunciado = "Sobre a biodiversidade da fauna amazônica, qual fator abaixo representa um risco crítico causado pela fragmentação da floresta?",
+                alternativas = new string[] { "A migração espontânea de todos os animais para biomas vizinhos como o Pampa", "A aceleração da evolução das espécies para se adaptarem ao pasto", "A interrupção de corredores ecológicos, isolando populações de animais" },
                 respostaCorreta = 2,
                 dificuldade = Dificuldade.Dificil
-            }
+            },
         };
 
         List<Pergunta> faceis = new List<Pergunta>();
