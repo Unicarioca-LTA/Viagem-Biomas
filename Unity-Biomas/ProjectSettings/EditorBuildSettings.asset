@@ -158,6 +158,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CerradoQuiz.unity
     guid: fa70c00c99d592848a2563e6bdbdf9c8
+  - enabled: 1
+    path: Assets/Scenes/CaatingaQuiz.unity
+    guid: 8cb4a3e1ffe392e469de85d2ca87d2b7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

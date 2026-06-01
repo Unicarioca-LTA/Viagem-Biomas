@@ -53,6 +53,7 @@
     <Compile Include="Assets\Scripts\QuizManagerCerrado.cs" />
     <Compile Include="Assets\Scripts\QuizManager.cs" />
     <Compile Include="Assets\Scripts\GameUtility.cs" />
+    <Compile Include="Assets\Scripts\QuizManagerCaatinga.cs" />
     <Compile Include="Assets\Scripts\TelaRanking.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\SelecaoManager.cs" />

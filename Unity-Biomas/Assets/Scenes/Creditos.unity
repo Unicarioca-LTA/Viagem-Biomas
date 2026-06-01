@@ -954,6 +954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorMenu
   painelAmazonia: {fileID: 0}
   painelCerrado: {fileID: 0}
+  painelCaatinga: {fileID: 0}
 --- !u!4 &1927107929
 Transform:
   m_ObjectHideFlags: 0
@@ -1402,7 +1403,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\nJOS\xC9 EDUARDO MUNIZ LIMA\n\n\nCL\xC1UDIO M\xC1RCIO DO NASCIMENTO ABREU
     PEREIRA\nSHEILA DA SILVA FERREIRA ARANTES\n\n\nEDUARDO FURTADO MOREIRA\nIGOR
-    NUNES GON\xC7ALVES\n\n\nISABELLA LEGEY\nSARAH ISNARDO"
+    NUNES GON\xC7ALVES\n\n\nSARA ISNARDO FERNANDES\nISABELLA LEGEY SIQUEIRA QUEIROZ"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}
   m_sharedMaterial: {fileID: -4932870387541299705, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}

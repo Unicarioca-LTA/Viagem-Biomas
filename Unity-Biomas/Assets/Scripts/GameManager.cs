@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public Button painelAmazonia;
     public Button painelCerrado;
+    public Button painelCaatinga;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "SelecaoBioma")
         {
             // Verifica se os botões foram associados
-            if (painelAmazonia != null && painelCerrado != null)
+            if (painelAmazonia != null && painelCerrado  != null && painelCaatinga != null)
             {
                 // AMAZÔNIA
                 if (GameUtility.AmazoniaLiberada == false)
@@ -28,6 +29,12 @@ public class GameManager : MonoBehaviour
                 if (GameUtility.CerradoLiberado == false)
                 {
                     painelCerrado.interactable = false;
+                }
+
+                // CAATINGA
+                if (GameUtility.CaatingaLiberado == false)
+                {
+                    painelCaatinga.interactable = false;
                 }
             }
             else
@@ -44,6 +51,7 @@ public class GameManager : MonoBehaviour
         {
             GameUtility.AmazoniaLiberada = true;
             GameUtility.CerradoLiberado = true;
+            GameUtility.CaatingaLiberado = true;
         }
     }
 
@@ -70,6 +78,16 @@ public class GameManager : MonoBehaviour
     if (painelCerrado != null)
     {
         painelCerrado.interactable = false;
+    }
+    }   
+    
+    public void DesativarCaatinga()
+    {
+    GameUtility.CaatingaLiberado = false;
+
+    if (painelCaatinga != null)
+    {
+        painelCaatinga.interactable = false;
     }
     }   
 

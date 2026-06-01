@@ -3305,6 +3305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorMenu
   painelAmazonia: {fileID: 89020219}
   painelCerrado: {fileID: 756378949}
+  painelCaatinga: {fileID: 1975310902}
 --- !u!4 &1927107929
 Transform:
   m_ObjectHideFlags: 0
