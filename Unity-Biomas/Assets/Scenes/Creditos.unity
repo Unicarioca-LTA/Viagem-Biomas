@@ -560,7 +560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866891346
@@ -1003,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 75, y: 200}
+  m_AnchoredPosition: {x: 75, y: 244.99998}
   m_SizeDelta: {x: -150, y: -800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2013725806
@@ -1377,7 +1377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 75, y: 200}
+  m_AnchoredPosition: {x: 75, y: 244.99998}
   m_SizeDelta: {x: -150, y: -800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126516906
@@ -1402,7 +1402,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\nJOS\xC9 EDUARDO MUNIZ LIMA\n\n\nCL\xC1UDIO M\xC1RCIO DO NASCIMENTO ABREU
     PEREIRA\nSHEILA DA SILVA FERREIRA ARANTES\n\n\nEDUARDO FURTADO MOREIRA\nIGOR
-    NUNES GON\xC7ALVES\n\n\nISABELLA"
+    NUNES GON\xC7ALVES\n\n\nISABELLA LEGEY\nSARAH ISNARDO"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}
   m_sharedMaterial: {fileID: -4932870387541299705, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}

@@ -29,6 +29,9 @@ public class RankingManager : MonoBehaviour
     [Header("Configuração do Pop-up de Confirmação")]
     public GameObject painelConfirmacao; 
 
+    [Header("Configuração do Pop-up de Nome Repetido")]
+    public GameObject painelJogadorRepetido; // 👈 NOVO: Arraste o seu novo painel aqui no Inspector
+
     void Awake()
     {
         if (instance == null)
@@ -43,20 +46,16 @@ public class RankingManager : MonoBehaviour
 
     void Start()
     {
-        // 🚀 Toda vez que a cena do Ranking abre, buscamos o progresso do jogador atual
-        // e atualizamos o ranking de forma definitiva.
         SincronizarJogadorAtual();
 
         if (textoRanking != null)
         {
+            // Forçamos a atualização visual logo no início
             MostrarRanking();
         }
     }
 
-    // ========================================================
-    // BUSCA O PROGRESSO ATUAL DO JOGADOR E ENVIA AO RANKING
-    // ========================================================
-void SincronizarJogadorAtual()
+    void SincronizarJogadorAtual()
     {
         string nome = "Jogador";
         if (GameHandler.instance != null && !string.IsNullOrEmpty(GameHandler.instance.nomeJogador))
@@ -64,24 +63,43 @@ void SincronizarJogadorAtual()
             nome = GameHandler.instance.nomeJogador.Trim();
         }
 
-        // 💡 PADRONIZAÇÃO: Forçamos a chave a ser sempre em minúsculo para evitar conflito de caixa
         string chaveSalvamento = "Pontos_" + nome.ToLower();
 
         if (PlayerPrefs.HasKey(chaveSalvamento))
         {
             int pontuacaoTotalAtual = PlayerPrefs.GetInt(chaveSalvamento);
-            SalvarPontuacao(nome, pontuacaoTotalAtual); // Mantém o nome original com maiúsculas para exibição visual
+            
+            // 🔍 ANTES DE SALVAR: Verifica se o jogador já existe no ranking salvo
+            if (JogadorJaExisteNoRanking(nome))
+            {
+                // Se já existe, abre o painel bloqueando o fluxo e NÃO salva/atualiza nada ainda
+                AbrirPainelJogadorRepetido();
+                return; 
+            }
+
+            SalvarPontuacao(nome, pontuacaoTotalAtual);
         }
     }
 
-    // ========================================================
-    // SALVAR/ATUALIZAR PONTUAÇÃO (Evita duplicar o mesmo nome)
-    // ========================================================
+    // 💡 NOVA FUNÇÃO AUXILIAR: Verifica de forma limpa se o nome já consta no banco de dados
+    private bool JogadorJaExisteNoRanking(string nome)
+    {
+        if (!PlayerPrefs.HasKey("Ranking")) return false;
+
+        string json = PlayerPrefs.GetString("Ranking");
+        Ranking rankingSalvo = JsonUtility.FromJson<Ranking>(json);
+        
+        if (rankingSalvo != null && rankingSalvo.jogadores != null)
+        {
+            return rankingSalvo.jogadores.Exists(j => j.nome.ToLower() == nome.ToLower());
+        }
+        return false;
+    }
+
     public void SalvarPontuacao(string nome, int pontuacao)
     {
         Ranking ranking = new Ranking();
 
-        // 1. Carrega o Ranking existente
         if (PlayerPrefs.HasKey("Ranking"))
         {
             string json = PlayerPrefs.GetString("Ranking");
@@ -92,40 +110,31 @@ void SincronizarJogadorAtual()
             }
         }
 
-        // 2. 🔍 VERIFICAÇÃO CHAVE: O jogador já está no ranking?
         Jogador jogadorExistente = ranking.jogadores.Find(j => j.nome.ToLower() == nome.ToLower());
 
         if (jogadorExistente != null)
         {
-            // Se já existe, apenas atualiza os pontos dele com o novo total acumulado
             jogadorExistente.pontuacao = pontuacao;
             Debug.Log($"Usuário existente encontrado. Pontuação de {nome} atualizada para: {pontuacao}");
         }
         else
         {
-            // Se for um jogador inédito, adiciona ele na lista
             ranking.jogadores.Add(new Jogador(nome, pontuacao));
             Debug.Log($"Novo usuário registrado: {nome} com {pontuacao} pts");
         }
 
-        // 3. Ordena do maior para o menor
         ranking.jogadores.Sort((a, b) => b.pontuacao.CompareTo(a.pontuacao));
 
-        // 4. Mantém apenas TOP 10
         if (ranking.jogadores.Count > 10)
         {
             ranking.jogadores.RemoveRange(10, ranking.jogadores.Count - 10);
         }
 
-        // 5. Salva de volta no PlayerPrefs
         string novoJson = JsonUtility.ToJson(ranking);
         PlayerPrefs.SetString("Ranking", novoJson);
         PlayerPrefs.Save();
     }
 
-    // ========================================================
-    // MOSTRAR RANKING NA TELA (Inalterado, mantendo seu padrão)
-    // ========================================================
     public void MostrarRanking()
     {
         if (textoRanking == null) return;
@@ -148,7 +157,7 @@ void SincronizarJogadorAtual()
         }
 
         textoRanking.alignment = TextAlignmentOptions.TopLeft;
-        string texto = "<align=center>RANKING</align>\n\n";
+        string texto = "\n\n";
 
         int totalJogadores = ranking.jogadores.Count;
         int limiteCaracteres = 10; 
@@ -186,7 +195,23 @@ void SincronizarJogadorAtual()
     public void AbrirJanelaConfirmacao() { if (painelConfirmacao != null) painelConfirmacao.SetActive(true); }
     public void CancelarReiniciar() { if (painelConfirmacao != null) painelConfirmacao.SetActive(false); }
 
-public void ConfirmarEReiniciarRanking()
+    // ========================================================
+    // CONTROLES DO NOVO PAINEL DE JOGADOR REPETIDO
+    // ========================================================
+    public void AbrirPainelJogadorRepetido() 
+    { 
+        if (painelJogadorRepetido != null) painelJogadorRepetido.SetActive(true); 
+    }
+
+    public void FecharPainelJogadorRepetido() 
+    { 
+        if (painelJogadorRepetido != null) painelJogadorRepetido.SetActive(false); 
+        
+        // Opcional: Se quiser redirecionar o usuário de volta para a tela de input de nome ao fechar,
+        // você pode colocar a lógica ou carregamento de cena aqui.
+    }
+
+    public void ConfirmarEReiniciarRanking()
     {
         if (PlayerPrefs.HasKey("Ranking"))
         {
@@ -199,7 +224,6 @@ public void ConfirmarEReiniciarRanking()
                 {
                     foreach (Jogador j in rankingSalvo.jogadores)
                     {
-                        // 💡 PADRONIZAÇÃO: Procuramos a chave em minúsculo, garantindo que ela seja limpa
                         string chavePontosDoJogador = "Pontos_" + j.nome.Trim().ToLower();
                         
                         if (PlayerPrefs.HasKey(chavePontosDoJogador))
