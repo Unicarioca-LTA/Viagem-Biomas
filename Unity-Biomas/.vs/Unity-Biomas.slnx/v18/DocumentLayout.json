@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\QuizManagerCaatinga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\QuizManagerCaatinga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\ltaun\\desktop\\projetos\\viagem-biomas\\unity-biomas\\assets\\scripts\\quizmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\quizmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\ltaun\\desktop\\projetos\\viagem-biomas\\unity-biomas\\assets\\scripts\\rankingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rankingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\ltaun\\desktop\\projetos\\viagem-biomas\\unity-biomas\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\ltaun\\desktop\\projetos\\viagem-biomas\\unity-biomas\\assets\\scripts\\quizmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\quizmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\ltaun\\desktop\\projetos\\viagem-biomas\\unity-biomas\\assets\\scripts\\gameutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,35 +42,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameUtility.cs",
-              "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\GameUtility.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameUtility.cs",
-              "ToolTip": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\GameUtility.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameUtility.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T19:47:51.075Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "QuizManager.cs",
-              "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\QuizManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\QuizManager.cs",
-              "ToolTip": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\QuizManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\QuizManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMBAAAIAAAAAAAAAA==",
+              "Title": "RankingManager.cs",
+              "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\RankingManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RankingManager.cs",
+              "ToolTip": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\RankingManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RankingManager.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAQwJgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T17:09:29.923Z"
+              "WhenOpened": "2026-05-25T17:06:48.329Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "QuizManagerCaatinga.cs",
+              "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\QuizManagerCaatinga.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\QuizManagerCaatinga.cs",
+              "ToolTip": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\QuizManagerCaatinga.cs",
+              "RelativeToolTip": "Assets\\Scripts\\QuizManagerCaatinga.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T16:56:30.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AvatarData.cs",
               "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\AvatarData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AvatarData.cs",
@@ -78,7 +84,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "QuizManager.cs",
+              "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\QuizManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\QuizManager.cs",
+              "ToolTip": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\QuizManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\QuizManager.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wDMBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T17:09:29.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameUtility.cs",
+              "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\GameUtility.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameUtility.cs",
+              "ToolTip": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\GameUtility.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameUtility.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T19:47:51.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GameHandler.cs",
               "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\GameHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameHandler.cs",
@@ -90,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TelaRanking.cs",
               "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\TelaRanking.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TelaRanking.cs",
@@ -102,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -111,19 +142,6 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwBUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-19T20:22:06.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RankingManager.cs",
-              "DocumentMoniker": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\RankingManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\RankingManager.cs",
-              "ToolTip": "C:\\Users\\ltaun\\Desktop\\projetos\\Viagem-Biomas\\Unity-Biomas\\Assets\\Scripts\\RankingManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\RankingManager.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAJgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T17:06:48.329Z",
-              "EditorCaption": ""
             }
           ]
         }

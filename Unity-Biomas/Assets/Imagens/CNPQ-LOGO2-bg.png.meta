@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: dd33453d2bf59c040ad70d838e43e156
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7005312753826608128
+    second: CNPQ-LOGO2-bg_0
+  - first:
+      213: -3368763918271346149
+    second: CNPQ-LOGO2-bg_1
+  - first:
+      213: -78036614931243350
+    second: CNPQ-LOGO2-bg_2
+  - first:
+      213: 2099408433711074847
+    second: CNPQ-LOGO2-bg_3
+  - first:
+      213: -1068959834351696146
+    second: CNPQ-LOGO2-bg_4
+  - first:
+      213: 574921118896307925
+    second: CNPQ-LOGO2-bg_5
+  - first:
+      213: -903119913352204912
+    second: CNPQ-LOGO2-bg_6
+  - first:
+      213: 4399868239774480344
+    second: CNPQ-LOGO2-bg_7
+  - first:
+      213: -5828635230700725687
+    second: CNPQ-LOGO2-bg_8
+  - first:
+      213: 5339703753100080766
+    second: CNPQ-LOGO2-bg_9
+  - first:
+      213: 9136917406034587411
+    second: CNPQ-LOGO2-bg_10
+  - first:
+      213: -182666711045919533
+    second: CNPQ-LOGO2-bg_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 76
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00cc6a78a2128ce90800000000000000
+      internalID: -7005312753826608128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 48
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a8847901fbf31d0800000000000000
+      internalID: -3368763918271346149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 48
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae9c87bc12caeef0800000000000000
+      internalID: -78036614931243350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 49
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ecec9e8d8922d10800000000000000
+      internalID: 2099408433711074847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 37
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee68e4ab1ba4a21f0800000000000000
+      internalID: -1068959834351696146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 18
+        width: 60
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de3fa926b78af700800000000000000
+      internalID: 574921118896307925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 18
+        width: 56
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d6f0749397773f0800000000000000
+      internalID: -903119913352204912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_7
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 18
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7f7424ad87f0d30800000000000000
+      internalID: 4399868239774480344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_8
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 18
+        width: 107
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a91cc93278c1fa0800000000000000
+      internalID: -5828635230700725687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_9
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3
+        width: 60
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76b951c5407a1a40800000000000000
+      internalID: 5339703753100080766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_10
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f66c8a8f9dcce70800000000000000
+      internalID: 9136917406034587411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CNPQ-LOGO2-bg_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 76
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dca1d71899077df0800000000000000
+      internalID: -182666711045919533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CNPQ-LOGO2-bg_0: -7005312753826608128
+      CNPQ-LOGO2-bg_1: -3368763918271346149
+      CNPQ-LOGO2-bg_10: 9136917406034587411
+      CNPQ-LOGO2-bg_11: -182666711045919533
+      CNPQ-LOGO2-bg_2: -78036614931243350
+      CNPQ-LOGO2-bg_3: 2099408433711074847
+      CNPQ-LOGO2-bg_4: -1068959834351696146
+      CNPQ-LOGO2-bg_5: 574921118896307925
+      CNPQ-LOGO2-bg_6: -903119913352204912
+      CNPQ-LOGO2-bg_7: 4399868239774480344
+      CNPQ-LOGO2-bg_8: -5828635230700725687
+      CNPQ-LOGO2-bg_9: 5339703753100080766
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
