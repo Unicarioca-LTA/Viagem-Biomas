@@ -161,6 +161,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaatingaQuiz.unity
     guid: 8cb4a3e1ffe392e469de85d2ca87d2b7
+  - enabled: 1
+    path: Assets/Scenes/MataAtlanticaQuiz.unity
+    guid: c2ffd6c6c14e54a4abb1095256021622
+  - enabled: 1
+    path: Assets/Scenes/PantanalQuiz.unity
+    guid: 6fc2d8d9e203e484b924aa9ac199bbe8
+  - enabled: 1
+    path: Assets/Scenes/PampaQuiz.unity
+    guid: 5d354e3c279bdf04b9170cd7b9f27144
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

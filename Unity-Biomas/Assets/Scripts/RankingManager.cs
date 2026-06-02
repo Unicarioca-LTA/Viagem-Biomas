@@ -69,19 +69,12 @@ public class RankingManager : MonoBehaviour
         {
             int pontuacaoTotalAtual = PlayerPrefs.GetInt(chaveSalvamento);
             
-            // 🔍 ANTES DE SALVAR: Verifica se o jogador já existe no ranking salvo
-            if (JogadorJaExisteNoRanking(nome))
-            {
-                // Se já existe, abre o painel bloqueando o fluxo e NÃO salva/atualiza nada ainda
-                AbrirPainelJogadorRepetido();
-                return; 
-            }
-
+            // CORREÇÃO: Agora nós atualizamos os pontos direto, sem bloquear o jogador atual!
             SalvarPontuacao(nome, pontuacaoTotalAtual);
         }
     }
 
-    // 💡 NOVA FUNÇÃO AUXILIAR: Verifica de forma limpa se o nome já consta no banco de dados
+    // Mantemos a função caso você precise dela para outra checagem, mas ela não bloqueia mais o fluxo acima
     private bool JogadorJaExisteNoRanking(string nome)
     {
         if (!PlayerPrefs.HasKey("Ranking")) return false;
@@ -142,7 +135,7 @@ public class RankingManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("Ranking"))
         {
             textoRanking.alignment = TextAlignmentOptions.Center;
-            textoRanking.text = "RANKING";
+            textoRanking.text = "\n";
             return;
         }
 
@@ -152,7 +145,7 @@ public class RankingManager : MonoBehaviour
         if (ranking == null || ranking.jogadores == null || ranking.jogadores.Count == 0)
         {
             textoRanking.alignment = TextAlignmentOptions.Center;
-            textoRanking.text = "RANKING";
+            textoRanking.text = "\n";
             return;
         }
 

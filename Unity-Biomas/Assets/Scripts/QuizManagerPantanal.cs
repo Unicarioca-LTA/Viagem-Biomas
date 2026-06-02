@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 // 🛑 ATENÇÃO: O enum Dificuldade e a classe Pergunta FORAM REMOVIDOS daqui
 // para evitar o erro de duplicidade (CS0101). Eles já são lidos globalmente.
 
-public class QuizManagerCaatinga : MonoBehaviour
+public class QuizManagerPantanal : MonoBehaviour
 {
     [Header("Componentes de Tela do Quiz")]
     public TextMeshProUGUI textoPergunta;
@@ -18,7 +18,7 @@ public class QuizManagerCaatinga : MonoBehaviour
 
     private Pergunta[] perguntas;
     private int perguntaAtual = 0;
-    private int pontuacaoBioma = 0; // Pontuação exclusiva deste bioma (Caatinga)
+    private int pontuacaoBioma = 0; // Pontuação exclusiva deste bioma (Pantanal)
     public int contador = 0;
 
     public void DesativarPainelPergunta(GameObject painel)
@@ -36,7 +36,7 @@ public class QuizManagerCaatinga : MonoBehaviour
             painelResultadoFinal.SetActive(false);
         }
 
-        // 📝 BANCO DE DADOS EXCLUSIVO DA CAATINGA
+        // 📝 BANCO DE DADOS EXCLUSIVO DA Pantanal
         Pergunta[] todasPerguntas = new Pergunta[]
         {
             // =========================
@@ -202,7 +202,7 @@ public class QuizManagerCaatinga : MonoBehaviour
 
         if (indice == perguntas[perguntaAtual].respostaCorreta)
         {
-            Debug.Log("Acertou na Caatinga!");
+            Debug.Log("Acertou no Pantanal!");
 
             if (perguntas[perguntaAtual].dificuldade == Dificuldade.Facil) pontuacaoBioma += 10;
             else if (perguntas[perguntaAtual].dificuldade == Dificuldade.Medio) pontuacaoBioma += 20;
@@ -210,7 +210,7 @@ public class QuizManagerCaatinga : MonoBehaviour
         }
         else
         {
-            Debug.Log("Errou na Caatinga!");
+            Debug.Log("Errou no Pantanal!");
         }
 
         perguntaAtual++;
@@ -249,7 +249,7 @@ public class QuizManagerCaatinga : MonoBehaviour
         if (textoResultadoFinal != null)
         {
             textoResultadoFinal.text = $"<align=center><b>Parabéns!</b>\n" +
-                                       $"Você concluiu o Quiz sobre a Caatinga!\n\n" +
+                                       $"Você concluiu o Quiz sobre o Pantanal!\n\n" +
                                        $"Sua pontuação no Bioma: <color=green>{pontuacaoBioma} pts</color>\n" +
                                        $"Sua Pontuação Total Acumulada: <color=yellow>{novaPontuacaoTotal} pts</color></b></align>";
         }
@@ -262,7 +262,7 @@ public class QuizManagerCaatinga : MonoBehaviour
 
     public void BotaoFinalizarCena()
     {
-        Debug.Log("Saindo da Caatinga e indo para o Ranking...");
+        Debug.Log("Saindo do Pantanal e indo para o Ranking...");
         SceneManager.LoadScene("CenaRanking"); 
     }
 }
