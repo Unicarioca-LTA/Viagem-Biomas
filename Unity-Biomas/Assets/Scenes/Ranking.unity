@@ -662,8 +662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tem Certeza?                                      Isso apagar\xE1 todos
-    os dados do Ranking"
+  m_text: "Tem Certeza? \\nIsso apagar\xE1 todos os dados do Ranking"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}
   m_sharedMaterial: {fileID: -4932870387541299705, guid: c93ef6c70b025be4bb788e1dba97568f, type: 2}
@@ -690,8 +689,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1556,7 +1555,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -419.9073, y: -128.87}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107458294
 MonoBehaviour:
@@ -1578,8 +1577,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5037237556673466204, guid: 2da30217b7f377a4e989a2447d4bcc72, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
