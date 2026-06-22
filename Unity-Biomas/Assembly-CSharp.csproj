@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\QuizManagerPantanal.cs" />
     <Compile Include="Assets\Scripts\ButtonSoundManager.cs" />
     <Compile Include="Assets\Scripts\QuizManagerMataAtlantica.cs" />
+    <Compile Include="Assets\Scripts\PainelManager.cs" />
     <Compile Include="Assets\Scripts\QuizManagerCaatinga.cs" />
     <Compile Include="Assets\Scripts\TelaRanking.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
