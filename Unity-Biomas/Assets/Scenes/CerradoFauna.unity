@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelLobo
+        m_MethodName: FecharPainelTres
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -337,7 +337,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelTamandua
+        m_MethodName: AbrirPainelDois
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -470,7 +470,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelGaviao
+        m_MethodName: FecharPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1043,7 +1043,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelAnta
+        m_MethodName: AbrirPainelQuatro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1313,7 +1313,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelGaviao
+        m_MethodName: AbrirPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2188,7 +2188,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelLobo
+        m_MethodName: AbrirPainelTres
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2458,7 +2458,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelAnta
+        m_MethodName: FecharPainelQuatro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2591,7 +2591,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelGaviao
+        m_MethodName: AbrirPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3340,22 +3340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8f56462183d8046bba1bf5651038f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PainelManager
-  painelAcai: {fileID: 0}
-  painelGuarana: {fileID: 0}
-  painelVRegia: {fileID: 0}
-  painelBugio: {fileID: 0}
-  painelBoto: {fileID: 0}
-  painelCaititu: {fileID: 0}
-  painelBarauna: {fileID: 0}
-  painelCacto: {fileID: 0}
-  painelJuazeiro: {fileID: 0}
-  painelTatu: {fileID: 0}
-  painelArarinha: {fileID: 0}
-  painelAve: {fileID: 0}
-  painelLobo: {fileID: 1217597175}
-  painelAnta: {fileID: 484104665}
-  painelTamandua: {fileID: 1973981009}
-  painelGaviao: {fileID: 1187022202}
+  painelUm: {fileID: 1187022202}
+  painelDois: {fileID: 1973981009}
+  painelTres: {fileID: 1217597175}
+  painelQuatro: {fileID: 484104665}
 --- !u!4 &2017938062
 Transform:
   m_ObjectHideFlags: 0
@@ -3593,7 +3581,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2017938061}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelTamandua
+        m_MethodName: FecharPainelDois
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

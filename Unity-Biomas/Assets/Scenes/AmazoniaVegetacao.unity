@@ -553,7 +553,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1338443357}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelVRegia
+        m_MethodName: FecharPainelTres
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -686,7 +686,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1338443357}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelGuarana
+        m_MethodName: FecharPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -863,7 +863,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1338443357}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelVRegia
+        m_MethodName: AbrirPainelTres
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1179,7 +1179,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1338443357}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelAcai
+        m_MethodName: AbrirPainelDois
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1981,9 +1981,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8f56462183d8046bba1bf5651038f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PainelManager
-  painelAcai: {fileID: 1913397382}
-  painelGuarana: {fileID: 1088490040}
-  painelVRegia: {fileID: 1648966391}
+  painelUm: {fileID: 1088490040}
+  painelDois: {fileID: 1913397382}
+  painelTres: {fileID: 1648966391}
+  painelQuatro: {fileID: 0}
 --- !u!4 &1338443358
 Transform:
   m_ObjectHideFlags: 0
@@ -2084,7 +2085,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1338443357}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelAcai
+        m_MethodName: FecharPainelDois
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2217,7 +2218,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1338443357}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelGuarana
+        m_MethodName: AbrirPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

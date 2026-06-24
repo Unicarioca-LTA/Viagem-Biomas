@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110791590}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelTatu
+        m_MethodName: AbrirPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -281,18 +281,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8f56462183d8046bba1bf5651038f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PainelManager
-  painelAcai: {fileID: 0}
-  painelGuarana: {fileID: 0}
-  painelVRegia: {fileID: 0}
-  painelBugio: {fileID: 0}
-  painelBoto: {fileID: 0}
-  painelCaititu: {fileID: 0}
-  painelBarauna: {fileID: 0}
-  painelCacto: {fileID: 0}
-  painelJuazeiro: {fileID: 0}
-  painelTatu: {fileID: 2121210616}
-  painelArarinha: {fileID: 1716161797}
-  painelAve: {fileID: 1955983503}
+  painelUm: {fileID: 2121210616}
+  painelDois: {fileID: 1716161797}
+  painelTres: {fileID: 1955983503}
+  painelQuatro: {fileID: 0}
 --- !u!4 &110791591
 Transform:
   m_ObjectHideFlags: 0
@@ -667,7 +659,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110791590}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelTatu
+        m_MethodName: AbrirPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1027,7 +1019,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110791590}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelAve
+        m_MethodName: FecharPainelTres
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1536,7 +1528,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110791590}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelAve
+        m_MethodName: AbrirPainelTres
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2018,7 +2010,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110791590}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: AbrirPainelArarinha
+        m_MethodName: AbrirPainelDois
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2762,7 +2754,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110791590}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelTatu
+        m_MethodName: FecharPainelUm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3116,7 +3108,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110791590}
         m_TargetAssemblyTypeName: PainelManager, Assembly-CSharp
-        m_MethodName: FecharPainelArarinha
+        m_MethodName: FecharPainelDois
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
