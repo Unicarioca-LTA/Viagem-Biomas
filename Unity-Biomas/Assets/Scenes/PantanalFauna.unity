@@ -1717,14 +1717,14 @@ RectTransform:
   m_Children:
   - {fileID: 146090363}
   - {fileID: 1705136094}
-  - {fileID: 1362546174}
-  - {fileID: 1256628158}
-  - {fileID: 967541933}
-  - {fileID: 1013526182}
   - {fileID: 991240263}
   - {fileID: 1482640170}
   - {fileID: 1604137475}
   - {fileID: 1877606772}
+  - {fileID: 1362546174}
+  - {fileID: 1256628158}
+  - {fileID: 967541933}
+  - {fileID: 1013526182}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
