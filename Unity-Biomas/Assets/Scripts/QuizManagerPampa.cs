@@ -162,7 +162,7 @@ public class QuizManagerPampa : MonoBehaviour
 
             new Pergunta
             {
-                enunciado = "16. O Pampa é o único bioma brasileiro com clima Subtropical. Qual a principal consequência dessa característica para a dinâmica da vegetação ao longo do ano?",
+                enunciado = "O Pampa é o único bioma brasileiro com clima Subtropical. Qual a principal consequência dessa característica para a dinâmica da vegetação ao longo do ano?",
                 alternativas = new string[] { "A vegetação mantém o mesmo ritmo de crescimento constante durante os 12 meses", "Ocorre uma sazonalidade térmica marcada, onde o frio intenso do inverno pode reduzir a atividade biológica de algumas espécies", "As plantas desenvolvem espinhos para se protegerem da neve que cai diariamente no verão" },
                 respostaCorreta = 1,
                 dificuldade = Dificuldade.Dificil

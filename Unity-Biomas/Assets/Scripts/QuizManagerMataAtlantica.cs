@@ -105,7 +105,7 @@ public class QuizManagerMataAtlantica : MonoBehaviour
             {
                 enunciado = "Além dos animais e plantas, quem são os 'povos tradicionais' que habitam e protegem o bioma Mata Atlântica? ",
                 alternativas = new string[] { "Apenas turistas estrangeiros", "Indígenas, quilombolas, caiçaras e ribeirinhos", "Pessoas que vivem apenas em prédios de luxo" },
-                respostaCorreta = 0,
+                respostaCorreta = 1,
                 dificuldade = Dificuldade.Medio
             },
 
